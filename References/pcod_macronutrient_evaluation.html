@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMOS & Metabolic Syndrome: Nutritional Interventions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 640px) {
+            .chart-container {
+                height: 250px;
+            }
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900 pb-12">
+
+    <div class="max-w-6xl mx-auto px-4 pt-8">
+        <header class="bg-[#3F51B5] text-white rounded-xl p-8 mb-8 shadow-lg">
+            <h1 class="text-4xl font-bold mb-4">PMOS & Metabolic Syndrome Nutrition</h1>
+            <p class="text-xl">Standard caloric deficits fail. Macro composition dictates hormonal response. 40/35/25
+                split vs Standard Diet. Naked carbs vs Buffered carbs.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <section class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                <h2 class="text-2xl font-bold text-[#FF9800] mb-2">Macro Splits: Standard vs PMOS</h2>
+                <p class="mb-4">Standard diet = high carbohydrate (55%). PMOS optimal = low glycemic, high protein,
+                    moderate fat (40C/35P/25F). High protein → satiety ↑, insulin ↓.</p>
+                <div class="chart-container flex-grow">
+                    <canvas id="macroChart"></canvas>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                <h2 class="text-2xl font-bold text-[#009688] mb-2">Naked vs Buffered Carbs</h2>
+                <p class="mb-4">Naked carbs = carbohydrates consumed in isolation. Buffered = carbs + protein/fat.
+                    Buffer → gastric emptying ↓ → glucose spike ↓.</p>
+                <div class="grid grid-cols-2 gap-4 text-center mt-4 mb-4">
+                    <div class="bg-red-50 p-4 rounded-lg border-2 border-[#F44336]">
+                        <div class="text-3xl font-bold text-[#F44336]">Naked</div>
+                        <div class="text-sm">Rapid Spike</div>
+                    </div>
+                    <div class="bg-teal-50 p-4 rounded-lg border-2 border-[#009688]">
+                        <div class="text-3xl font-bold text-[#009688]">Buffered</div>
+                        <div class="text-sm">Blunted Peak</div>
+                    </div>
+                </div>
+                <div class="text-center font-bold text-xl text-gray-700">Buffer = Glycemic Control</div>
+            </section>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <section class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-2xl font-bold text-[#F44336] mb-2">Postprandial Glucose Response</h2>
+                <p class="mb-4">Blood glucose trajectory post-ingestion. Naked carbs → steep hyper-glycemic peak.
+                    Buffered → stabilized, flat curve. Stable glucose = stable insulin.</p>
+                <div class="chart-container">
+                    <canvas id="glucoseChart"></canvas>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-2xl font-bold text-[#3F51B5] mb-2">Insulin AUC (Area Under Curve)</h2>
+                <p class="mb-4">Total insulin secreted. PMOS = hyperinsulinemia. Lower AUC = improved androgen profile.
+                    Buffering carbs reduces insulin AUC significantly.</p>
+                <div class="chart-container">
+                    <canvas id="aucChart"></canvas>
+                </div>
+            </section>
+        </div>
+
+        <section class="bg-white p-6 rounded-xl shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-[#212121] mb-6 text-center">Physiological Cascade</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center w-full md:w-1/4">
+                    <div class="font-bold text-[#F44336]">Naked Carbs</div>
+                    <div class="text-2xl">⬇️</div>
+                    <div class="text-sm">Rapid Digestion</div>
+                </div>
+                <div class="text-2xl font-bold text-gray-400 hidden md:block">→</div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center w-full md:w-1/4">
+                    <div class="font-bold text-[#FF9800]">Hyperinsulinemia</div>
+                    <div class="text-2xl">⬇️</div>
+                    <div class="text-sm">Ovarian Theca Cell Stimulation</div>
+                </div>
+                <div class="text-2xl font-bold text-gray-400 hidden md:block">→</div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center w-full md:w-1/4">
+                    <div class="font-bold text-[#3F51B5]">Hyperandrogenism</div>
+                    <div class="text-2xl">❌</div>
+                    <div class="text-sm">PMOS Symptoms Exacerbated</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const formatLabel = (label) => {
+            if (typeof label !== 'string') return label;
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > 16) {
+                    if (currentLine) lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            });
+            if (currentLine) lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const commonTooltip = {
+            callbacks: {
+                title: function (tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) return label.join(' ');
+                    return label;
+                }
+            }
+        };
+
+        const ctxMacro = document.getElementById('macroChart').getContext('2d');
+        new Chart(ctxMacro, {
+            type: 'bar',
+            data: {
+                labels: [formatLabel('Standard Deficit Diet'), formatLabel('PMOS Optimal (40/35/25)')],
+                datasets: [
+                    { label: 'Carbohydrates', data: [55, 40], backgroundColor: '#FF9800' },
+                    { label: 'Protein', data: [15, 35], backgroundColor: '#3F51B5' },
+                    { label: 'Fat', data: [30, 25], backgroundColor: '#009688' }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: commonTooltip },
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true, max: 100, title: { display: true, text: '% of Total Calories' } }
+                }
+            }
+        });
+
+        const ctxGlucose = document.getElementById('glucoseChart').getContext('2d');
+        new Chart(ctxGlucose, {
+            type: 'line',
+            data: {
+                labels: ['0 min', '30 min', '60 min', '90 min', '120 min'],
+                datasets: [
+                    {
+                        label: 'Naked Carbs',
+                        data: [90, 165, 145, 110, 85],
+                        borderColor: '#F44336',
+                        backgroundColor: 'rgba(244, 67, 54, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Buffered Carbs',
+                        data: [90, 115, 105, 95, 90],
+                        borderColor: '#009688',
+                        backgroundColor: 'rgba(0, 150, 136, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: commonTooltip },
+                scales: {
+                    y: { title: { display: true, text: 'Blood Glucose (mg/dL)' } }
+                }
+            }
+        });
+
+        const ctxAuc = document.getElementById('aucChart').getContext('2d');
+        new Chart(ctxAuc, {
+            type: 'bar',
+            data: {
+                labels: [formatLabel('Naked Carbs'), formatLabel('Buffered Carbs (Protein+Fat)')],
+                datasets: [{
+                    label: 'Insulin AUC',
+                    data: [12500, 7200],
+                    backgroundColor: ['#F44336', '#009688'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: commonTooltip,
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { title: { display: true, text: 'Insulin AUC (μU/mL × min)' } }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+﻿Chrononutrition & Circadian Insulin Sensitivity: Metabolic Dysfunction Management
+Endogenous Circadian Physiology & Diurnal Glucose Clearance Mechanisms
+Glucose metabolism regulation relies SCN central pacemaker + peripheral clocks.1 Diurnal variations dictate glucose tolerance.2 Tolerance highest morning, lowest evening/night.2 Endogenous circadian system overrides behavioral cycle impacting evening glucose tolerance reduction.3 Circadian misalignment (simulated night work, shift work) ↓ glucose tolerance independent behavioral cycle.1
+SCN-HPA Axis & Hepatic Glucose Production (HGP) Dynamics
+SCN regulates HGP diurnal variation.5 SCN → PVN → CRH release.5 PVN → anterior pituitary corticotrophs → ACTH release.5 ACTH → adrenal gland → glucocorticoid (cortisol) release.5 SNS co-regulates glucocorticoid rhythms.5 Circadian HGP changes correlate blood FFA + cortisol levels.4 Nighttime HGP ↑ → insulin sensitivity ↓.4 Daytime HGP ↓ → insulin sensitivity ↑.4 NIDDM patients exhibit rhythmic nighttime IR ↑ independent blood glucose, insulin clearance, exercise, food intake, sleep.4 Biological evening = reduced β-cell responsiveness, reduced early-phase insulin secretion.2 Obesity/T2D patients exhibit attenuated/phase-delayed circadian metabolic rhythms.2
+BMAL1, CLOCK, & Peripheral Insulin Sensitivity Pathways
+Feeding behavior = dominant zeitgeber synchronizing peripheral clocks.1 Central pacemaker aligns metabolic tissue.1 Molecular pathways dictate peripheral sensitivity.
+Pancreatic & Gut Clocks: GLP-1 synthesized intestinal L-cells + pancreatic α-cells.6 GLP-1 stimulates insulin secretion via GCK (Hexokinase 4).6 CLOCK + BMAL1 bind E-box promoter → circadian GCK expression control.6 GCK acts glucose sensor.6 GCK affinity low (  ), lacks glucose-6-phosphate inhibition, phosphorylates glucose across broad range (3-15 mM).6 BMAL1 disruption = abnormal GCK function, glucose metabolism dysregulation.6 Dietary signals regulate GCK via insulin-mediated SREBP1c pathway.6 Postprandial insulin → SREBP1c activation → GCK transcription ↑.6 GCK activity ↑ feeding, ↓ fasting.6 GCK activators (dorzagliatin) align liver physiological rhythm pre-meal.6
+Muscle, Adipose, & Renal Clocks: BMAL1 → HK2 → Glut4 pathway regulates peripheral insulin sensitivity (muscle/adipose).6 HK2 regulates renal glucose reabsorption + glycogen deposition.6
+Melatonin-Induced Insulin Inhibition & MTNR1B Genotype
+Endogenous melatonin circadian rhythm impairs biological night glucose homeostasis.7 Late food intake aligns melatonin spike.7
+Melatonin Signaling Mechanisms: Melatonin → MT2 receptor binding.8 MT2 activation → cAMP ↓ → PKA ↓.8 Outcome = glucose-stimulated insulin secretion ↓.8 IP3 pathway transiently compensates nighttime IR, ↑ insulin secretion initially.9 Prolonged melatonin → cAMP pathway dominance → insulin secretion ↓.9 Decreasing blood glucose concentration subsequently ↓ stimulatory effect, normalizing insulin.9
+MTNR1B Risk Variant (G-allele): MTNR1B rs10830963 G-allele = elevated melatonin, early sleep timing.10 G-allele carriers upregulate MT2 receptors.8 Risk variant + late food intake = extreme cAMP inhibition, massive glucose-stimulated insulin secretion ↓.7 Reduced insulin release exacerbated circulating melatonin.8 Genotype differences manifest β-cell function reduction.7
+
+
+Clinical Interaction Matrix: MTNR1B Genotype vs Meal Timing
+	Parameter Outcome
+	Statistical Significance
+	Late vs Early condition (All subjects)
+	Melatonin serum ↑ 3.5-fold
+	-
+	Late vs Early condition (All subjects)
+	Insulin AUC ↓ 6.7%, Glucose AUC ↑ 8.3%
+	-
+	MTNR1B G-allele + Late Dinner
+	Glucose AUC
+	  
+
+	MTNR1B G-allele + Late Dinner
+	Corrected Insulin Response
+	  
+
+	MTNR1B G-allele + Late Dinner
+	Disposition Index (β-cell function    insulin sensitivity)
+	  
+
+	Moving dinner earlier bypasses melatonin MT2 inhibition, drastically improving glucose tolerance MTNR1B carriers.8
+Morning Carbohydrate Front-Loading Clinical Efficacy
+Front-loading calories/carbohydrates aligns optimal morning insulin sensitivity peak.12 Cortisol peaks late afternoon/early evening.12 Elevated evening cortisol → IR ↑, glucose sensitivity ↓.12 Morning insulin secretion ↑ clears glucose rapidly, ↓ glucose variability, ↓ post-prandial spikes.12
+High-Energy Breakfast vs High-Energy Dinner (Jakubowicz Trials)
+T2D obese patients (BMI 22-35, age 30-70, duration <10 years, metformin/diet therapy).13 Isoenergetic crossover trial. Bdiet (2946 kJ breakfast, 2523 kJ lunch, 858 kJ dinner) vs Ddiet (858 kJ breakfast, 2523 kJ lunch, 2946 kJ dinner).13
+
+
+Glycemic & Hormonal Markers (Bdiet vs Ddiet)
+	Bdiet Effect vs Ddiet
+	Overall Daily Glucose AUC
+	↓ 20%
+	Glucose   
+	↓ 24%
+	Glucose Peak
+	↓ 24%
+	Overall Daily Insulin AUC
+	↑ 20%
+	Insulin   
+	↑ 11%
+	C-peptide AUC
+	↑ 20%
+	tGLP-1 AUC (  , early/late intervals)
+	↑ 14-35% (  )
+	iGLP-1 AUC
+	↑ 16%
+	Post-Lunch Glucose
+	↓ 21-25% (  )
+	Post-Lunch Glucose (early interval)
+	↓ 13% (  )
+	Post-Lunch Glucose (late interval)
+	↓ 24% (  )
+	Post-Lunch Insulin
+	↑ 23%
+	Mean Triglycerides
+	↓ 33.6% (Bdiet) vs ↑ 14.6% (Ddiet)
+	Bdiet = significantly reduced overall PPHG entire day.13 Bdiet lunch efficiency proves morning feeding preconditions β-cells subsequent meals.13 3 meals/day Bdiet vs traditional 6 small meals/day = better weight loss, less hunger, improved diabetes control, reduced insulin dose requirements.18 Satiety scores ↑ Bdiet, hunger scores ↓ Bdiet, ghrelin ↓ Bdiet.15
+Macronutrient Composition: Whey protein-based breakfast (WBdiet) vs protein-based (PBdiet) vs carbohydrate-based (CBdiet).19 12-week T2D trial. WBdiet HbA1c ↓ 0.89% (11.5 mmol/mol), weight ↓ 7.6 kg (  ).19 PBdiet HbA1c ↓ 0.6% (7.1 mmol/mol), weight ↓ 6.1 kg (  ).19 CBdiet HbA1c ↓ 0.36% (2.9 mmol/mol), weight ↓ 3.5 kg (  ).19 Whey protein amplifies front-loading efficacy.
+Time-Restricted Eating (TRE) Chronotype Modulation
+TRE restricts food intake    10h window, fasting    14h.20 Feeding cues dominant peripheral clock synchronizer.1 eTRE (fasting starts midafternoon,   h) vs lTRE (afternoon/evening eating).21
+eTRE vs lTRE Clinical Parameters
+Meta-analysis data (40 trials, 3259 subjects).22 eTRE+EX (exercise) superior glucoregulatory outcome.23 lTRE age-dependent HOMA-IR treatment effect decrease.22 lTRE delays growth hormone + insulin acrophases, advances cortisol peak.24 lTRE adverse glucose homeostasis impact.24
+
+
+Cardiometabolic SUCRA Rankings (Meta-Analysis)
+	Ranking Hierarchy
+	Systolic Blood Pressure (SBP) Efficacy
+	mTRE+EX (85%) > eTRE (70%) > eTRE+EX (52%) > CR (48%) > lTRE (41%) > mTRE (36%)
+	Diastolic Blood Pressure (DBP) Efficacy
+	eTRE+EX (69%) > mTRE (68%) > eTRE/lTRE (66%) > control (36%) > mTRE+EX (34%) > CR (12%)
+	
+
+Fasting Insulin Reductions (eTRE vs alternatives)
+	Mean Difference
+	95% CI
+	Certainty
+	eTRE vs mTRE
+	-2.75   IU/ml
+	-4.76 to -0.73
+	High
+	eTRE vs lTRE
+	-3.32   IU/ml
+	-5.36 to -1.28
+	High
+	eTRE vs self-selected TRE
+	-3.69   IU/ml
+	-6.05 to -1.33
+	High
+	Lipid Metabolism: eTRE+EX ↓ TC (-27.8 mg/dl, 95% CI: -38.3, -17.2).23 eTRE+EX ↓ LDL-C (-14.9 mg/dl, 95% CI: -24.2, -5.64).23 lTRE = no TC/LDL-C reduction, occasionally higher baseline LDL.20 lTRE+ER participants higher LDL-C baseline (  ) vs eTRE+ER.20
+Body Composition & Hormones: eTRE+ER ↓ leptin, ↓ food desire, ↓ eating capacity vs ER alone.20 eTRE ↓ fat free mass-lean mass 0.79 kg (95% CI -1.35 to -0.23) vs mTRE.22 6-h eTRE vs lTRE.25 6-h eTRE ↓ SBP, mean glucose, fasting insulin, IR, leptin, thyroid axis.25 6-h lTRE only ↓ leptin.25 eTRE carbohydrate reduction correlates fasting interval change (  ,   ).25 eTRF ↑ resting energy expenditure AM hours.26 Mechanism = circadian TSH + T3 thyroid hormone thermogenesis stimulation (brown adipose tissue, skeletal muscle ATPases).26 Adiponectin peaks 11 AM (early chronotype).26 Prolonged fasting ↑ adiponectin synthesis, regulates hepatic circadian metabolism.26
+Prolonged Controlled Daytime vs Delayed Eating: 8-week randomized crossover, BMI 19-27 kg/  , n=12 (age 26.3    3.4).27 Daytime (0800h-1900h) vs Delayed (1200h-2300h).27 Isoenergetic, matched sleep-wake/exercise.27 Daytime = ↓ body weight, ↓ HOMA-IR, ↓ trunk-to-leg fat ratio, ↓ resting energy expenditure, ↓ RQ, ↓ fasting glucose/insulin, ↓ total/dHDL cholesterol, ↓ adiponectin.27 Delayed = ↑ triglycerides, ↑ IR markers.27 Circadian phase/amplitude (melatonin, cortisol, ghrelin, leptin) unaltered eating schedule.27 Daytime limits peripheral desynchronization.27
+MASLD 12-Week Trial: MD (Mediterranean diet) + 10-h TRF. MASLD patients, n=59, BMI 32.1, age 52.9.28 eTRF (0800-1800) vs lTRF (1200-2200) vs Control.28 All groups ↓ BW, anthropometry, BP.28 eTRF specific improvements = ↓ HbA1c, ↓ Matsuda index IR, ↓ HOMA-IR, ↓ fasting glucose-to-insulin ratio.28
+Carbohydrate Distribution & The Second-Meal Effect
+Carbohydrate intake timing dictates glycemic tolerance subsequent meals.29
+Early Time-Restricted Carbohydrate (eTRC) Interventions
+eTRC restricts carbohydrate-rich foods morning/early afternoon, aligning circadian glucose tolerance.31 T2D eTRC trial (12 weeks) under free-living conditions.31 BMI 29.4    3.7, age 67.2    7.9, HbA1c 49    5 mmol/mol.31 Isoenergetic Mediterranean control (50% CHO, 30% fat, 20% protein).31 eTRC consumed 58% more CHO breakfast, 69% less CHO post-lunch (mainly fruit/non-starchy veg evening).31
+Results: eTRC HbA1c ↓ 3 mmol/mol (-0.2%), Control HbA1c ↓ 4 mmol/mol (-0.3%) (  ).32 eTRC achieved comparable FPG reduction, CGM glucose variability, MMTT glucose tolerance, HOMA-IR, insulin clearance, glucagon reduction.32 Neutral beta-cell parameters, GLP-1, GIP, NEFA.32
+Gestational Diabetes Mellitus (GDM) eTRC: Diet-treated GDM (75g 2-h OGTT    8.5 mmol/L), n=12.33 2    3 days randomized crossover.33 High-Carbohydrate Morning (HCM) vs Low-Carbohydrate Morning (LCM).33 HCM = 50% CHO morning.33
+* HCM Benefits: Mean glucose ↓ 0.3 mmol/L (  ), FBG ↓ 0.4 mmol/L (  ), HOMA-IR ↓.33
+* HCM Drawbacks: MAGE ↑ 0.7 mmol/L (  ), Coefficient of Variation (CV) ↑ 5.1% (  ).33 High initial carb load improves absolute glycemia/insulin sensitivity, increases intra-day variability.33 Egg-based low-carbohydrate breakfast vs guideline low-fat breakfast ↓ CGM glucose excursions, ↓ overall energy/CHO intake.34
+Nocturnal Glycemia & Last Eating Occasion (LEO)
+LEO dictates next-day FBG.35 24h controlled protocol, n=33, adults (50-75 years) prediabetes/diet-controlled T2D.35 Standardized LEO 10:00 PM.35
+
+
+LEO Glycemic Correlations with Next-Day Fasting Glucose (FBG)
+	Correlation Coefficient (r)
+	p-value
+	LEO-PPGR (3h Postprandial) Mean Glucose
+	0.704
+	  
+
+	LEO-PPGR Peak Glucose
+	0.535
+	  
+
+	LEO-PPGR AUC
+	0.708
+	  
+
+	Chronological Overnight Fast (COF) Glucose
+	0.878
+	  
+
+	Biological Overnight Fast (BOF) Glucose
+	0.878
+	  
+
+	LEO carbohydrate content dictates PPGR.35 Evening carbohydrate restriction prevents LEO-PPGR spikes → lowers next-day FBG.35 Matsuda index positively correlates glucose all periods, attenuates FBG associations.35
+Second-Meal Effect Mechanics
+Prior meal GI predicts subsequent meal tolerance.29 Low-GI dinner ↓ post-breakfast glycemia.29 High-GI breakfast (A) vs Low-GI breakfast (B) T2D crossover trial, n=45, 8-10h fast.36
+   * Breakfast A (High-GL): farina, CHO 78g, soluble fiber 0g, 1833 kJ.36
+   * Breakfast B (Low-GL): fiber-loop cereal, CHO 62g, soluble fiber 6.6g, 1515 kJ.36
+Post-breakfast B = ↓ glucose AUC, ↓ insulin AUC, ↑ FFA AUC (  ).36 Standardized lunch administered 4h post-breakfast.36 Post-lunch glucose similar both breakfasts, post-lunch insulin AUC ↓ following Breakfast B (  ).36 Whole grain/legume AM consumption lowers PPGR entire day, provides long-term HbA1c reduction.30
+Sleep-Low Method: Nighttime carbohydrate restriction improves exercise performance, fat metabolism.37 14-day study, n=22 university students.38 Evening carbohydrate restriction group prohibited CHO after 4:00 PM.38 Daily 1h running 65% max HR pre-breakfast.38 Method prevents evening LEO-PPGR, enhances overnight fat oxidation.37
+Sedentary Behavior Interactions & Evening Physical Activity
+Sedentary lifestyle + late-day carbohydrates = severe metabolic disruption, maximized IR.39
+Adipocyte Insulin Resistance & Lipolysis
+Sedentary subjects develop skeletal muscle + subcutaneous fat cell IR.39 204 sedentary vs 336 physically active subjects analyzed.39 Insulin inhibits triglyceride hydrolysis (antilipolysis), stimulates triglyceride formation (lipogenesis).39
+   * Responsiveness: Maximum insulin effect for antilipolysis (60% inhibition) + lipogenesis (twofold stimulation) = similar active vs sedentary.39
+   * Sensitivity: Half-maximal effective concentration ↓ 10-fold sedentary subjects (  ).39 Antilipolysis sensitivity highly associated physical activity independent BMI, age, sex, waist-hip ratio, fat-cell size.39
+   * Receptor Expression: mRNA expression insulin receptor, IRS-1, IRS-2 ↓ sedentary subjects.39
+   * FFA Dynamics: Hyperinsulinemia suppresses FFA, however FFA remains significantly higher sedentary vs active women (  ).39 Elevated FFA causes lipotoxicity, impairs peripheral insulin signaling.41
+Breaking Sedentary Time & MVPA Timing
+Interrupting prolonged daytime sitting ↓ plasma glucose AUC 31.5% (95% CI -49.3 to -13.8), ↓ insulin AUC 26.6% (95% CI -39.6 to -9.9).42 No significant triglyceride AUC change.42 Breaking sedentary time ↓ liver fat, ↓ IR, prevents T2D.40
+MVPA Timing Optimization: Diurnal variations influence exercise capacity.40 Afternoon/evening MVPA ↓ IR up to 25% vs even daily MVPA distribution.40 Morning MVPA = no IR advantage.40 Evening PA directly counteracts natural biological evening glucose tolerance deficit.40 Evening PA limits cortisol-induced evening IR.43
+Evening Carbohydrate Restriction + Sedentary State
+Evening carbohydrate restriction mitigates sedentary IR.41 Trial limited daily CHO intake 30% vs 60% over 3 meals.41
+      * Hormonal Response: Evening postprandial insulin + GIP responses ↓ >30% following 30% LC meals vs 60% HC meals.41 Sedentary trial insulin ↓ 36% (  ), exercise trial insulin ↓ 35% (  ).41
+      * HOMA-IR: Estimate ↓ >30%.41 Meal timing effect significant sedentary (  ) + exercise (  ) trials.41
+      * Interaction: Meal timing    diet composition interaction significant sedentary (  ) + exercise (  ).41
+      * Ketogenesis: D-3-hydroxybutyrate AUC ↑ post-evening LC meal vs morning LC meal (  ).41
+Mechanism: Delayed intestinal adaptation low-carbohydrate diet.41 Evening low-CHO limits SREBP1c-mediated GCK activation, limiting hepatic lipogenesis.6 Pre-meal exercise + LC diet exacerbates glucose intolerance via pre-meal FFA elevation.41
+Synthesis: Metabolic Dysfunction Chrononutrition Architecture
+         1. Carbohydrate Front-Loading (Active Hours): Maximizes BMAL1-GCK activation, harnesses early-phase insulin secretion.3 Bdiet protocols (heavy AM, light PM) ↓ 24h glucose AUC 20%, ↓ post-lunch glucose 25%, ↑ GLP-1 30%.13 Mitigates high-GI second-meal effects, preconditioning β-cells.36 eTRE synchronizes peripheral clocks, ↓ fasting insulin 2.75   IU/ml vs mTRE, ↓ SBP, ↓ age-independent HOMA-IR.22 eTRF ↑ AM resting energy expenditure via TSH/T3 thyroid thermogenesis.26
+         2. Evening Carbohydrate Restriction (Sedentary Hours): Prevents LEO-PPGR spikes, dictating lower next-day FBG (r=0.704).35 Bypasses endogenous melatonin MT2-mediated cAMP suppression, preserving insulin secretion.7 Critical for MTNR1B G-allele carriers exhibiting extreme late-meal β-cell failure.7 Prevents hyperinsulinemic lipogenesis sedentary subcutaneous fat.39 Reduces evening postprandial insulin + GIP >30%, ↑ D-3-hydroxybutyrate fat oxidation.41
+         3. Physical Activity Chronobiology: Sedentary behavior ↓ adipocyte antilipolysis sensitivity 10-fold, raising lipotoxic FFA.39 Afternoon/evening MVPA ↓ IR 25%, directly counteracting endogenous circadian evening glucose tolerance drop.40 Breaking sedentary time ↓ glucose AUC 31.5%, counteracting peripheral desynchronization.42 Evening PA + evening CHO restriction normalizes biological night metabolic profile.38
+Works cited
+            1. Chrononutrition: Potential, Challenges, and Application in Managing Obesity - MDPI, accessed May 15, 2026, https://www.mdpi.com/1422-0067/26/11/5116
+            2. Circadian Regulation of Glucose, Lipid, and Energy Metabolism in ..., accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC5995632/
+            3. Endogenous circadian system and circadian misalignment impact glucose tolerance via separate mechanisms in humans | PNAS, accessed May 15, 2026, https://www.pnas.org/doi/10.1073/pnas.1418955112
+            4. Evidence for a circadian rhythm of insulin sensitivity in patients with NIDDM caused by cyclic changes in hepatic glucose production - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/8690150/
+            5. Circadian Clock, Diurnal Glucose Metabolic Rhythm, and Dawn Phenomenon - DigitalCommons@TMC, accessed May 15, 2026, https://digitalcommons.library.tmc.edu/cgi/viewcontent.cgi?article=2119&context=baylor_docs
+            6. Circadian rhythm, glucose metabolism and diabetic ... - Frontiers, accessed May 15, 2026, https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2025.1537231/full
+            7. Interplay of Dinner Timing and MTNR1B Type 2 Diabetes Risk Variant on Glucose Tolerance and Insulin Secretion: A Randomized Crossover Trial - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC8918262/
+            8. Late dinner impairs glucose tolerance in MTNR1B risk allele carriers: A randomized, cross-over study - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC5634913/
+            9. Molecular Mechanisms of the Melatonin Receptor Pathway Linking Circadian Rhythm to Type 2 Diabetes Mellitus - MDPI, accessed May 15, 2026, https://www.mdpi.com/2072-6643/15/6/1406
+            10. Linking MTNR1B Variants to Diabetes: The Role of Circadian Rhythms, accessed May 15, 2026, https://diabetesjournals.org/diabetes/article/65/6/1490/35109/Linking-MTNR1B-Variants-to-Diabetes-The-Role-of
+            11. NCT02642640 | Interaction of Melatonin and MTNR1B Genotype on Glucose Control - Study 1 | ClinicalTrials.gov, accessed May 15, 2026, https://clinicaltrials.gov/study/NCT02642640
+            12. Why Front-Loading Your Carbs Can Help Balance Glucose Levels - Veri, accessed May 15, 2026, https://www.veri.co/learn/front-loading-calories-carbs
+            13. High-energy breakfast with low-energy dinner decreases overall daily hyperglycaemia in type 2 diabetic patients: a randomised clinical trial - Tel Aviv University, accessed May 15, 2026, https://cris.tau.ac.il/en/publications/high-energy-breakfast-with-low-energy-dinner-decreases-overall-da/
+            14. High-energy breakfast with low-energy dinner helps control blood sugar in people with type 2 diabetes | ScienceDaily, accessed May 15, 2026, https://www.sciencedaily.com/releases/2015/02/150224182541.htm
+            15. High caloric intake at breakfast vs. dinner differentially influences weight loss of overweight and obese women - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/23512957/
+            16. High-energy breakfast with low-energy dinner decreases overall daily hyperglycaemia in type 2 diabetic patients - ResearchGate, accessed May 15, 2026, https://www.researchgate.net/profile/Daniela-Jakubowicz/publication/292694491_Differential_Islet_and_Incretin_Hormone_Responses_after_High-Caloric_Breakfast_vs_Isocaloric_Dinner_in_Type_2_Diabetic_Subjects/links/56b24a7808ae5ec4ed4b36c9/Differential-Islet-and-Incretin-Hormone-Responses-after-High-Caloric-Breakfast-vs-Isocaloric-Dinner-in-Type-2-Diabetic-Subjects.pdf
+            17. High-energy breakfast with low-energy dinner decreases overall daily hyperglycaemia in type 2 diabetic patients: a randomised clinical trial - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/25724569/
+            18. High-energy breakfast promotes weight loss, helps reduce total daily insulin dose for type 2 diabetes | Endocrine Society, accessed May 15, 2026, https://www.endocrine.org/news-and-advocacy/news-room/2018/highenergy-breakfast-promotes-weight-loss-helps-reduce-total-daily-insulin-dose-for-type-2-diabetes
+            19. High-energy breakfast based on whey protein reduces body weight, postprandial glycemia and HbA1C in Type 2 diabetes - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/28863364/
+            20. Comparing the influence of early and late time-restricted eating with energy restriction and energy restriction alone on cardiometabolic markers, metabolic hormones and appetite in adults with overweight/obesity: per-protocol analysis of a 3-month randomized clinical trial - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC12309031/
+            21. The Effect of Early Time-Restricted Feeding on Glycemic Profile in Adults: A Systematic Review of Interventional Studies - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC9382685/
+            22. Effects of timing and eating duration of time restricted eating on ..., accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC12829361/
+            23. How Does Early, Midday, and Late Time-Restricted Eating Impact Anthropometry and Cardiometabolic Health? A Systematic Review and Network Meta-Analysis of RCTs | medRxiv, accessed May 15, 2026, https://www.medrxiv.org/content/10.64898/2026.01.29.26345140v1.full-text
+            24. Advancing Chrononutrition for Cardiometabolic Health: A 2023 National Heart, Lung, and Blood Institute Workshop Report, accessed May 15, 2026, https://www.ahajournals.org/doi/10.1161/JAHA.124.039373
+            25. Randomized controlled trial for time-restricted eating in overweight and obese young adults, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC9400087/
+            26. Effects of Early and Late Time-Restricted Feeding on Parameters of Metabolic Health: An Explorative Literature Assessment - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC11175017/
+            27. Prolonged, Controlled Daytime versus Delayed Eating Impacts Weight and Metabolism | Request PDF - ResearchGate, accessed May 15, 2026, https://www.researchgate.net/publication/347773660_Prolonged_Controlled_Daytime_versus_Delayed_Eating_Impacts_Weight_and_Metabolism
+            28. Effects of a 12‐Week Mediterranean‐Type Time‐Restricted Feeding Protocol in Patients With Metabolic Dysfunction‐Associated Steatotic Liver Disease: A Randomised Controlled Trial—The 'CHRONO‐NAFLD Project' - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC11950810/
+            29. Second-meal effect: low-glycemic-index foods eaten at dinner improve subsequent breakfast glycemic response - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/2844076/
+            30. Optimizing the “Second Meal Effect” for a Healthy Glycemic Response - Metagenics Institute, accessed May 15, 2026, https://www.metagenicsinstitute.com/blogs/second-meal-glycemic-response/
+            31. Early time-restricted carbohydrate consumption vs conventional dieting in type 2 diabetes: a randomised controlled trial - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/37971503/
+            32. Early time-restricted carbohydrate consumption vs conventional dieting in type 2 diabetes: a randomised controlled trial - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC10789836/
+            33. Effect of High Versus Low Carbohydrate Intake in the Morning on Glycemic Variability and Glycemic Control Measured by Continuous Blood Glucose Monitoring in Women with Gestational Diabetes Mellitus—A Randomized Crossover Study - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC7071236/
+            34. Study Details | NCT06814171 | UBC Breakfast Study 2.0 | ClinicalTrials.gov, accessed May 15, 2026, https://clinicaltrials.gov/study/NCT06814171
+            35. Biological vs. Chronological Overnight Fasting: Influence of Last Evening Meal on Morning Glucose in Dysglycemia - MDPI, accessed May 15, 2026, https://www.mdpi.com/2072-6643/17/12/2026
+            36. Effects of breakfast meal composition on second meal metabolic responses in adults with Type 2 diabetes mellitus - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/16670695/
+            37. Effects of Short-Term Nighttime Carbohydrate Restriction Method on Exercise Performance and Fat Metabolism - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC11243291/
+            38. (PDF) Effects of Short-Term Nighttime Carbohydrate Restriction Method on Exercise Performance and Fat Metabolism - ResearchGate, accessed May 15, 2026, https://www.researchgate.net/publication/382011160_Effects_of_Short-Term_Nighttime_Carbohydrate_Restriction_Method_on_Exercise_Performance_and_Fat_Metabolism
+            39. Relationship Between a Sedentary Lifestyle and Adipose Insulin Resistance - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/36445942/
+            40. New study reveals that physical activity in the afternoon or evening is linked to reduced insulin resistance (and thus better control of blood sugar) - Diabetologia, accessed May 15, 2026, https://diabetologia-journal.org/2022/11/02/new-study-reveals-that-physical-activity-in-the-afternoon-or-evening-is-linked-to-reduced-insulin-resistance-and-thus-better-control-of-blood-sugar/
+            41. Third Exposure to a Reduced Carbohydrate Meal Lowers Evening Postprandial Insulin and GIP Responses and HOMA-IR Estimate of Insulin Resistance - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC5087910/
+            42. Breaking Up Evening Sitting with Resistance Activity Improves Postprandial Glycemic Response: A Randomized Crossover Study - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC10348652/
+            43. Study: Physical Activity in the Evening Lowers Blood Sugar Levels - The Obesity Society, accessed May 15, 2026, https://www.obesity.org/study-physical-activity-in-the-evening-lowers-blood-sugar-levels/
+            44. Third Exposure to a Reduced Carbohydrate Meal Lowers Evening Postprandial Insulin and GIP Responses and HOMA-IR Estimate of Insulin Resistance - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/27798656/

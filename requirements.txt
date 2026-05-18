@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+litellm
+pandas
+streamlit
+httpx
+pyyaml
+python-dotenv
+tavily-python

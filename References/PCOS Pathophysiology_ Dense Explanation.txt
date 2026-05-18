@@ -1,0 +1,273 @@
+﻿Polyendocrine Metabolic Ovarian Syndrome (PMOS): Pathophysiology of Peripheral Insulin Resistance and Ovarian Hyperandrogenism
+1. Introduction and Diagnostic Evolution
+1.1 Nomenclature Transition: PMOS → PMOS
+Polycystic Ovary Syndrome (PMOS) = Polyendocrine Metabolic Ovarian Syndrome (PMOS). Lancet 2026 international consensus established the PMOS nomenclature.1 Reclassification removes the inaccurate "ovarian cyst" focus.3 Previous terminology obscured systemic metabolic features → caused delayed diagnosis → fragmented clinical care.3 PMOS acknowledges multisystem endocrine failure. Pathology integrates insulin, androgens, and neuroendocrine hormone dysregulation.3 PMOS diagnostic criteria integrate hyperandrogenism (HA), ovulatory dysfunction, and metabolic dysregulation.1
+1.2 Epidemiology and Clinical Phenotypes
+Global PMOS prevalence = 6–20% of reproductive-age females. Affects >170 million individuals worldwide.2 Disease manifests massive phenotypic heterogeneity. Core pathophysiological triad = systemic peripheral insulin resistance (IR) + compensatory hyperinsulinemia (HI) + ovarian theca cell HA.5 Insulin-Centric PMOS Analysis and Management Model (IC-PAMM) designates altered insulin biology = primary upstream disease driver.7 IR affects 50–80% of PMOS patients irrespective of body mass index (BMI).8 Hyperinsulinemic-euglycemic clamp studies confirm PMOS patients exhibit 27–50% reduced peripheral insulin sensitivity vs BMI-matched healthy controls.7 PMOS, type 2 diabetes mellitus (T2DM), obesity, and metabolic syndrome (MetS) form a pathophysiological continuum. Continuum generates a self-perpetuating vicious cycle.11
+
+
+PMOS Feature
+	Pathophysiological Consequence
+	Phenotypic Presentation
+	Systemic IR
+	Reduced glucose disposal
+	T2DM risk, MetS, acanthosis nigricans 4
+	Compensatory HI
+	Ovarian/Adrenal stimulation
+	Biochemical/Clinical Hyperandrogenism 6
+	Theca Cell Hyperplasia
+	Massive androgen synthesis
+	Hirsutism, acne, alopecia 12
+	Granulosa Cell Failure
+	Aromatase inhibition
+	Anovulation, infertility, PCOM 13
+	2. Systemic Peripheral Insulin Resistance (IR)
+2.1 Molecular Defect: Post-Receptor Signal Transduction
+Systemic IR = diminished biological response to insulin in classical target tissues.7 PMOS IR originates from intrinsic post-receptor signaling defects.15 Insulin binds Insulin Receptor (INSR). INSR = membrane-bound tyrosine kinase. Normal activation = INSR autophosphorylation (Tyr1158, Tyr1162, Tyr1163).16 Autophosphorylation recruits Insulin Receptor Substrate 1/2 (IRS-1/IRS-2). IRS proteins contain pleckstrin homology (PH) + phosphotyrosine binding (PTB) domains.16 Normal physiology → IRS-1/2 undergoes tyrosine phosphorylation. PMOS physiology → IRS-1/2 undergoes pathological serine phosphorylation.12 Target residues = IRS-1 Ser307 / Ser312.17 Serine phosphorylation = inhibitory. Blockade prevents Phosphoinositide 3-kinase (PI3K) docking. PI3K/Akt pathway activation fails. Glycogen synthase kinase 3 beta (GSK3β) remains unphosphorylated/overactive.19 Glycogen synthesis stops. GLUT4 membrane translocation fails. Cellular glucose uptake ceases.15 Genetic susceptibility heavily influences this defect. GWAS confirms IRS-1 Gly972Arg polymorphism + INSR variants correlate with PMOS pathogenesis.8
+2.2 Metabolic vs Mitogenic Pathway Divergence
+INSR activation initiates two primary intracellular cascades. Cascade 1 = PI3K/Akt (metabolic regulation). Cascade 2 = MAPK/ERK (mitogenic/steroidogenic regulation).21 Systemic PMOS IR = pathway-specific. PI3K/Akt cascade = blocked via IRS-1 Ser307 phosphorylation. MAPK/ERK cascade = fully intact and responsive.21 PMOS hyperinsulinemia selectively hyper-stimulates the unblocked MAPK/ERK pathway. Result = aberrant cellular proliferation, atherogenesis, and hyperthecosis.6
+
+
+Insulin Signaling Pathway
+	Normal Function
+	PMOS Pathology
+	Physiological Result
+	PI3K/Akt
+	Glucose transport, glycogen synthesis
+	Blocked via IRS-1 serine phosphorylation
+	Systemic Insulin Resistance 17
+	MAPK/ERK
+	Cell proliferation, gene transcription
+	Intact / Hyper-stimulated by HI
+	Theca cell hyperplasia 22
+	3. Tissue-Specific IR Profiles
+3.1 Skeletal Muscle IR
+Skeletal muscle = primary peripheral glucose disposal site. Absorbs 66% of postprandial glucose.20 PMOS muscle exhibits profound PI3K/Akt impairment.23 Secondary molecular defects exist. Circulating adiponectin drops. Low adiponectin → reduced AMP-activated protein kinase (AMPK) activity.12 Pyruvate dehydrogenase (PDH) insulin responsiveness decreases.12 Mitochondrial oxidative phosphorylation impairs.10 Extracellular matrix undergoes pathological remodeling. Fibrillin-3 (glycoprotein) accumulates in extracellular space. Accumulation negatively correlates with insulin-mediated glucose processing.20 Result = severe peripheral glucose intolerance.20
+3.2 Hepatic IR and NAFLD Pathogenesis
+Hepatic IR = unrestrained gluconeogenesis + enhanced de novo lipogenesis (DNL).25 INSR, IRS-1, and PI3Kcd mRNA expressions drop. GLUT1/GLUT2 transporter proteins decline.17 Normal physiology = insulin-activated Akt phosphorylates Forkhead box protein O1 (FoxO1). Phosphorylated FoxO1 exits nucleus → cytoplasm. Gluconeogenic gene transcription halts.26 PMOS physiology = Akt activation fails. FoxO1 remains unphosphorylated. FoxO1 retains nuclear localization. Gluconeogenesis continues unsuppressed despite hyperglycemia.26 Simultaneously, hyperinsulinemia drives DNL via Sterol Regulatory Element-Binding Protein 1c (SREBP-1c).28 SREBP-1c transcribes lipogenic enzymes → Acetyl-CoA Carboxylase 1 (ACC1), Fatty Acid Synthase (FAS), Stearoyl-CoA Desaturase (SCD1), Adenosine Triphosphate Citrate Lyase (ACL).28 Hepatic lipid accumulation results. PMOS adolescents exhibit 37.5% prevalence of Non-Alcoholic Fatty Liver Disease (NAFLD) / Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD).29
+3.3 Adipose Tissue IR and Lipotoxicity
+Adipocyte IR = failed suppression of lipolysis.25 Intracellular triglycerides hydrolyze. Free Fatty Acids (FFA) efflux into systemic circulation accelerates.25 Plasma FFA load induces lipotoxicity in muscle/liver. FFAs activate inflammatory serine kinases (JNK, IKK). Serine kinases phosphorylate IRS-1. IR amplifies.25 Adipose morphology alters. Hypertrophy occurs. Macrophages infiltrate tissue.32 CD11c (ITGAX) expression surges. Pro-inflammatory cytokine secretion elevates (TNF-a, IL-6, IL-1b).25 TNF-a activates Nuclear Factor Kappa B (NF-kB) pathway. Systemic low-grade inflammation establishes.33 Adipokine output dysregulates. Leptin secretion surges. Adiponectin secretion plummets.20 Epigenetic shifts occur under hyperinsulinemic stress → miR-33b-5p expression increases.34
+4. Compensatory Hyperinsulinemia (HI) and Clearance Dynamics
+4.1 Pancreatic Beta-Cell Hypersecretion
+Pancreatic b-cells detect peripheral IR-induced hyperglycemia. Beta-cells hypersecrete insulin to enforce euglycemia. Compensatory HI established.35 Prolonged HI acts as the principal upstream driver of PMOS reproductive dysfunction.7 Testosterone directly induces b-cell insulin hypersecretion, establishing an HA-HI positive feedback loop.13 Glucagon exerts an exaggerated insulinotropic effect in obese PMOS phenotypes. Glucagon infusion yields massive insulin spikes vs normo-ovulatory controls.13
+4.2 Impaired Insulin Clearance
+Insulin degradation = critically suppressed. Normal physiology = hepatic extraction clears 50–80% of portal insulin.13 PMOS physiology = hepatic and peripheral degradation rates plummet.13 T-lymphocyte insulin degradation capacity drops by 50% vs controls.13 Inverse correlation links serum androgen levels to insulin clearance rates.13 Hyperandrogenemia directly suppresses insulin degradation machinery. Vicious cycle finalizes: IR → HI → HA → decreased insulin clearance → exponentially worsened HI.13
+5. Hepatic Pathophysiology: SHBG Suppression
+Sex Hormone-Binding Globulin (SHBG) = homodimeric glycoprotein. Synthesized by hepatocytes. Encoded on chromosome 17p13.1. Principal regulator of sex steroid bioavailability.36 SHBG binds circulating testosterone with high affinity. PMOS defines by critically low serum SHBG.37 Reduced SHBG → biologically active Free Testosterone (FT) spikes. Mechanism = hyperinsulinemia + hepatic lipogenesis interactions.38
+5.1 Transcriptional Repression via HNF-4a
+Hepatocyte Nuclear Factor 4a (HNF-4a) = primary positive transcriptional activator for SHBG.28 HNF-4a binds DR1 and DR3 cis-elements on SHBG promoter. Hyperinsulinemia directly suppresses hepatic HNF-4a expression.28 Low HNF-4a → halted SHBG transcription.28 Metabolic DNL amplifies HNF-4a suppression. SREBP-1c-driven lipogenesis generates lipid intermediates. Monosaccharide conversion to palmitate inhibits HNF-4a expression. Hepatic triglyceride content negatively correlates with SHBG mRNA levels.28
+5.2 PPAR-y Competitive Antagonism
+DNL drives upregulation of Peroxisome Proliferator-Activated Receptor gamma (PPAR-y).28 PPAR-y acts as a direct SHBG repressor. PPAR-y structurally competes with HNF-4a for binding at the DR3 cis-element on the SHBG promoter.28 PPAR-y binding displaces HNF-4a. SHBG transcriptional activity terminates. Liver secretes zero SHBG.28
+5.3 Inflammatory Cytokine Interference
+Adipose-derived inflammatory mediators enter portal circulation. TNF-a activates NF-kB pathway in hepatocytes. IL-1b activates MEK-1/2 and JNK-MAPK pathways.28 Both cascades actively downregulate HNF-4a.28 Furthermore, low circulating adiponectin fails to activate AMPK. Low AMPK activity further drops HNF-4a levels.28 Net physiological result = total suppression of SHBG synthesis.37 Free Testosterone (FT) surges into target tissues.38 Elevated FT creates absolute + relative hyperandrogenemia.28
+
+
+SHBG Regulator
+	Mechanism in PMOS Liver
+	Effect on SHBG Promoter
+	Net SHBG Output
+	Insulin
+	Directly downregulates HNF-4a expression
+	Removes activation at DR1/DR3
+	Suppressed 28
+	SREBP-1c
+	Drives DNL; lipid intermediates block HNF-4a
+	Removes activation at DR1/DR3
+	Suppressed 28
+	PPAR-y
+	Competes with HNF-4a for DR3 site
+	Represses transcription directly
+	Suppressed 28
+	TNF-a / IL-1b
+	Activates NF-kB, MEK-1/2, JNK-MAPK
+	Downregulates HNF-4a synthesis
+	Suppressed 28
+	6. The Selective Ovarian Insulin Resistance Paradox
+PMOS features a unique metabolic paradox = "Selective Insulin Resistance".23 Systemic tissues (skeletal muscle, liver, adipose) exhibit profound PI3K/Akt pathway IR.23 Ovarian tissues (theca cells, granulosa cells) remain highly insulin-sensitive.35
+6.1 Intact PI3K/Akt Signaling in Theca Cells
+Mouse models (dihydrotestosterone-induced PMOS) confirm distinct tissue responses. PMOS hepatocytes = profoundly insulin resistant in vitro (FoxO1 nuclear export fails). Isogenous primary theca cells (TCs) + granulosa cells (GCs) = highly insulin sensitive.35 Fasting PMOS TCs demonstrate significantly upregulated FoxO1 phosphorylation vs controls.39 Insulin stimulation induces robust FoxO1 nuclear-to-cytoplasmic export in PMOS TCs, verifying intact PI3K/Akt signal transduction.39 PMOS TCs express higher baseline levels of IRS-1 and IRS-2 vs non-PMOS controls.13 Result = Theca cells possess intrinsic hypersensitivity to insulin.39 Systemic compensatory HI continuously hyper-stimulates these unblocked PI3K/Akt and MAPK/ERK pathways. TCs undergo hypertrophy and overproduce steroid hormones.35
+6.2 Inositolphosphoglycan Alternative Signaling
+Insulin employs secondary signal transduction mechanisms bypassing IRS-1. Insulin binding to INSR generates Inositolphosphoglycans (IPGs).41 IPGs act as intracellular second messengers. IPG signaling operates independently of PI3K/Akt metabolic blocks. IPG cascades directly stimulate steroidogenic enzyme activity.41 This alternative pathway guarantees uninterrupted insulin-driven androgen synthesis despite profound systemic IR.41
+7. Neuroendocrine Dysregulation: The LH Drive
+Hypothalamic-Pituitary-Ovarian (HPO) axis = completely dysregulated.43 Primary central defect = KNDy neuronal network hyperactivation. Arcuate nucleus KNDy neurons synthesize Kisspeptin, Neurokinin B (NKB), and Dynorphin A (DynA).12 KNDy neurons operate as the Gonadotropin-Releasing Hormone (GnRH) "pulse generator".44 Normal physiology = Kisspeptin stimulates GnRH. NKB acts as accelerator. DynA acts as brake.44 PMOS physiology = Kisspeptin and NKB expression massively elevated. DynA expression suppressed.12 GnRH pulse frequency and amplitude accelerate to pathological rates.25
+7.1 Pituitary Response: Inverted LH/FSH Ratio
+Rapid GnRH pulsatility favors pituitary Luteinizing Hormone (LH) synthesis. Follicle-Stimulating Hormone (FSH) synthesis lags.13 Pituitary secretes massive continuous volumes of LH.13 LH/FSH ratio inverts, frequently exceeding 3:1.36
+7.2 Androgen-Mediated Feedback Failure
+Normal physiology = Progesterone and estradiol exert negative feedback on GnRH/LH secretion. PMOS physiology = Excess androgens hyperactivate central Androgen Receptors (AR).20 Hypothalamic AR activation desensitizes GnRH neurons to progesterone-mediated negative feedback.13 Feedback loops sever. LH hypersecretion becomes continuous, losing all circadian and menstrual periodicity.25 Additionally, systemic insulin crosses blood-brain barrier. Insulin directly upregulates GnRH expression + augments LH pulse amplitude.7
+8. Theca Cell Steroidogenesis: The Biochemical Core
+Theca cells = primary locus of ovarian androgen synthesis. PMOS theca cells undergo massive hyperplasia (hyperthecosis) + steroidogenic enzyme overexpression.45
+8.1 The Two-Cell, Two-Gonadotropin Model
+Normal folliculogenesis relies on LH-FSH interplay. Theca cells express LHCGR (LH receptors). Granulosa cells express FSHR (FSH receptors).25 Theca cells synthesize androgens. Androgens diffuse into granulosa cells. Granulosa cells aromatize androgens → estrogens.45 PMOS pathogenesis = LH excess drives TC androgen overload. FSH deficiency stunts GC aromatization capacity. Unaromatized androgens accumulate locally and systemically.13
+8.2 The Steroidogenic Enzymatic Cascade
+Cholesterol enters theca cell cytoplasm. Steroidogenic Acute Regulatory Protein (StAR) rapidly transports cholesterol across outer → inner mitochondrial membrane.46 This transfer = initial rate-limiting step. Step 1: Cytochrome P450scc (CYP11A1) cleaves cholesterol side-chain. Cholesterol → Pregnenolone.46 Pregnenolone exits mitochondria into smooth endoplasmic reticulum. Step 2: Cytochrome P450c17 (CYP17A1) exerts 17a-hydroxylase activity. Pregnenolone → 17-OH-Pregnenolone.47 Step 3: CYP17A1 exerts 17,20-lyase activity. 17-OH-Pregnenolone → Dehydroepiandrosterone (DHEA).47 Step 4: 3b-Hydroxysteroid Dehydrogenase (3b-HSD) converts DHEA → Androstenedione.48 Step 5: Aldo-Keto Reductase 1C3 (AKR1C3) / 17b-HSD converts Androstenedione → Testosterone.33
+In PMOS, CYP11A1, 3b-HSD, and CYP17A1 undergo massive intrinsic overexpression.45 CYP17A1 acts as the critical metabolic switch dictating total androgen output.49
+9. Biochemical Synergy: LH + Insulin → CYP17A1
+Insulin acts as a potent co-gonadotropin.48 LH and Insulin utilize distinct, converging signal transduction pathways to synergistically amplify androgen synthesis.
+9.1 LH Signal Transduction (cAMP/PKA Pathway)
+LH binds LHCGR (G-protein coupled receptor). Gs alpha subunit activates Adenylate Cyclase. Adenylate Cyclase converts ATP → cyclic AMP (cAMP).50 cAMP activates Protein Kinase A (PKA).51 PKA phosphorylates specific transcription factors (SF-1, GATA4, CREB). Phosphorylated transcription factors bind promoter regions. StAR and CYP17A1 transcription surges.50
+9.2 Insulin/IGF-1 Signal Transduction (PI3K/Akt + MAPK/ERK)
+Insulin binds INSR + Insulin-Like Growth Factor 1 Receptor (IGF-1R). Tyrosine kinase activates PI3K. PI3K generates PIP3. PIP3 recruits PDK1. PDK1 phosphorylates Akt.13 Akt phosphorylation executes powerful steroidogenic drive. Separately, insulin signaling activates MAPK/ERK cascade → drives TC proliferation.22
+9.3 Synergistic Convergence Mechanisms
+Co-administration of LH + Insulin produces a 3- to 4-fold multiplicative increase in CYP17A1 and StAR mRNA expression vs either hormone alone.52 Convergence occurs via multiple mechanisms:
+1. cAMP Amplification: Insulin selectively augments LH-driven cAMP accumulation.51
+2. LHCGR Upregulation: Insulin directly transcribes/upregulates LHCGR expression. TCs become hypersensitized to ambient LH.7
+3. IGFBP-1 Suppression: Insulin downregulates hepatic/ovarian Insulin-Like Growth Factor Binding Protein 1 (IGFBP-1).53 Free IGF-1 levels rise. Free IGF-1 binds IGF-1R, powerfully amplifying the PI3K/Akt and MAPK/ERK cascades.43
+
+
+Signaling Molecule
+	Stimulus
+	Pathway Activated
+	Resulting Steroidogenic Action
+	LH
+	GnRH Pulsatility
+	cAMP / PKA
+	Phosphorylates SF-1/GATA4 → Promotes CYP17A1 50
+	Insulin
+	HI / MetS
+	PI3K / Akt
+	Phosphorylates FOXO1 → Derepresses CYP17A1 54
+	Insulin
+	HI / MetS
+	IPG Second Messengers
+	Directly stimulates androgen biosynthesis 42
+	IGF-1
+	Lowered IGFBP-1
+	PI3K + MAPK
+	Amplifies both LH and Insulin cascades 43
+	9.4 Transcriptional Regulators: FOXO1, GATA4, SF-1
+FOXO1 (Forkhead Box O1): Critical negative transcription factor. PMOS cumulus and theca cells exhibit significantly elevated FoxO1.55 Insulin-activated Akt phosphorylates FoxO1 at Thr24, Ser256, Ser319.26 Phosphorylation ejects FoxO1 from nucleus → cytoplasm.54 Nuclear exclusion of FoxO1 disinhibits steroidogenic promoters. CYP17A1 transcription escapes suppression.54 GATA4 & SF-1: Zinc finger and orphan nuclear receptors. LH/cAMP/PKA signaling phosphorylates GATA4 at Ser105. GATA4 physically interacts with Steroidogenic Factor-1 (SF-1). Complex aggressively binds and activates CYP17A1 and AMH promoters.56
+10. Intra-Ovarian Paracrine Modulators
+Folliculogenesis depends on local paracrine signaling. PMOS features severe intra-ovarian disruption.
+10.1 Anti-Müllerian Hormone (AMH)
+Secreted exclusively by granulosa cells of pre-antral and small antral follicles.58 PMOS ovaries contain immense volumes of arrested follicles. Massive AMH secretion follows.58 AMH acts as an intra-ovarian gatekeeper. High AMH directly inhibits FSH-stimulated aromatase (CYP19A1) expression in GCs.13 Conversion of androstenedione → estradiol halts. Follicular arrest ensues. AMH also operates centrally → directly stimulates GnRH neurons → amplifies pituitary LH secretion.43
+10.2 Activin, Inhibin, and Follistatin Axis
+Activin = TGF-b superfamily member. Normal function = promotes FSH synthesis, upregulates aromatase, represses theca cell androgen production.53 Inhibin = antagonizes activin. Promotes androgen production.59 Follistatin = binding protein. Neutralizes activin.53 PMOS pathophysiology: Hyperinsulinemia directly upregulates follistatin transcription.53 Elevated follistatin completely neutralizes local activin. Activin-mediated suppression of CYP17A1 lifts. Inhibin signaling dominates. Theca cell androgen synthesis accelerates uncontrollably.53
+10.3 Bone Morphogenetic Proteins (BMPs) & INSL3
+BMP6 represses TC steroidogenesis. BMP6 downregulates CYP17A1, LHCGR, StAR, and Insulin-Like Peptide 3 (INSL3).57 INSL3 activates RXFP2 receptor → increases androstenedione output. PMOS disrupts BMP signaling. INSL3 remains unsuppressed. Testosterone output surges.57
+10.4 WNT5a and Hippo/YAP Pathways
+WNT5a acts as an inflammatory factor in GCs. PMOS upregulates WNT5a via PI3K/AKT/NF-kB signaling.25 Increased GC inflammation induces oxidative stress. Follicular maturation halts.
+11. Granulosa Cell Dysfunction & Follicular Arrest
+Theca cell androgens normally transfer to Granulosa Cells (GCs) for aromatization. PMOS GCs exhibit total functional failure.
+* FSH Receptor (FSHR) Impairment: Excess AMH and androgens downregulate FSHR.14 Tyrosine phosphorylation of FSHR drops.61 FSH signaling terminates.
+* Aromatase (CYP19A1) Suppression: Androgen excess induces hypomethylation/suppression of the CYP19A1 promoter.14 Estrogen production halts.
+* Premature Luteinization: High ambient LH causes premature LHCGR expression on GCs. GCs luteinize before follicle maturation completes.30
+* Apoptosis & Arrest: MAPK-ERK1/2 pathway impairment inhibits GC proliferation. Apoptosis increases.18 Subordinate follicles fail to mature into dominant Graafian follicles. Pre-antral/antral follicles persist.59 Transvaginal ultrasound reveals polycystic ovarian morphology (PCOM).36
+12. Genetic, Epigenetic, and Environmental Modulators
+Genome-Wide Association Studies (GWAS) identify >29 unique susceptibility loci for PMOS, tightly linking the syndrome to metabolic and IR markers.9
+12.1 DENND1A Variant 2 (DENND1A.V2)
+DENND1A encodes connecdenn 1. Connecdenn 1 = clathrin-associated endosomal trafficking protein.62 PMOS theca cells universally overexpress the splice variant DENND1A.V2.62 V2 overexpression profoundly upregulates CYP17A1 and CYP11A1 mRNA.62 Mechanism involves altered vesicular recycling of LHCGR. Altered recycling amplifies LH signal transduction.64 Genetic knockdown of DENND1A.V2 completely abolishes theca cell hyperandrogenism.63 Epigenetic regulation involves microRNA miR-130b-3p. miR-130b-3p normally represses V2; this miRNA is severely downregulated in PMOS.65
+12.2 Oxidative Stress (ROS) & AGEs
+PMOS features intense systemic oxidative stress. Reactive Oxygen Species (ROS) activate p38 and JNK MAPK pathways.55 Activated MAPK directly upregulates CYP17A1 in theca cells.19 Furthermore, ROS inhibit IRS-1 tyrosine phosphorylation, exacerbating IR.61 Hyperglycemia generates Advanced Glycation End-products (AGEs). AGEs accumulate in follicular fluid. AGEs trigger TLR4/NF-kB pathways → induce GC apoptosis and worsen local ovarian IR.7
+12.3 Adipose AKR1C3: Peripheral Amplification
+Adipose tissue acts as a formidable secondary endocrine organ. PMOS adipocytes significantly upregulate AKR1C3 (Aldo-Keto Reductase 1C3) expression.33 AKR1C3 actively converts circulating weak androstenedione → highly potent testosterone directly within the adipose tissue matrix.33 This creates a massive localized insulin-androgen positive feedback loop. High local testosterone worsens adipocyte IR. Worse adipocyte IR spikes systemic HI. Severe systemic HI drives further theca androgen production. Peripheral amplification cements the disease phenotype.33
+13. Meta-Analyses and Clinical Interventions (2021-2026)
+Recent peer-reviewed meta-analyses strictly prioritize insulin-sensitizing interventions to target the IC-PAMM root etiology.7 Pharmacological and nutraceutical agents interrupt the IR-HI-HA cycle at specific molecular junctions.
+13.1 Glucagon-Like Peptide-1 Receptor Agonists (GLP-1 RAs)
+GLP-1 RAs (Semaglutide, Liraglutide, Exenatide) represent the premier pharmacological intervention for PMOS.13 Meta-analyses (2021-2026) definitively confirm GLP-1 RAs outperform Metformin across multiple parameters.13 GLP-1 RAs yield superior reductions in HOMA-IR, fasting insulin, BMI, and total testosterone.13 Mechanism = massive augmentation of glucose-dependent insulin secretion, radical deceleration of gastric emptying, and direct hypothalamic appetite suppression.13 Secondary benefits include profound attenuation of systemic inflammation and complete restoration of gut microbiota composition.66
+13.2 Metformin and Thiazolidinediones (TZDs)
+Metformin = biguanide class. Mechanism = AMPK activation. Metformin potently suppresses hepatic gluconeogenesis and improves peripheral glucose uptake.5 Meta-analyses demonstrate Metformin lowers serum fasting insulin, attenuates CYP17A1 activity, and raises hepatic SHBG output.5 Clinical efficacy peaks exclusively in hyperinsulinemic obese PMOS phenotypes. Lean normoinsulinemic phenotypes exhibit poor/variable response.13 TZDs (Pioglitazone, Rosiglitazone) = PPAR-y agonists. TZDs forcefully reverse insulin-stimulated mitogenic pathways while restoring metabolic PI3K/Akt signaling.31 Meta-analysis of 22 Randomized Controlled Trials (RCTs) proves Pioglitazone + Metformin combination therapy significantly outperforms Metformin monotherapy. Combination therapy aggressively reduces HOMA-IR, plummets total testosterone, and restores ovulatory frequency.67
+13.3 Inositol Therapeutics
+Inositols (Myo-inositol / D-chiro-inositol) function as inositolphosphoglycan second messengers for INSR signaling.41 Supplementation physically bypasses the IRS-1 serine phosphorylation blockade. Meta-analyses (spanning 35+ RCTs) validate Inositols improve INSR sensitivity, lower fasting insulin, reduce LH/FSH ratios, and drastically decrease hyperandrogenism.8 Optimal clinical administration requires exact physiological ratios (40:1 MI:DCI) to correctly mimic endogenous metabolic states.8
+13.4 Gut Microbiota and Probiotics
+Gut dysbiosis drives endotoxemia. Lipopolysaccharides (LPS) breach intestinal barrier. LPS binds TLR4 receptors → triggers systemic inflammation via NF-kB → intensely worsens systemic IR.17 2024-2026 systematic reviews and meta-analyses comprising 28 distinct studies (including robust RCTs) evaluate Probiotic/Synbiotic supplementation.68 Probiotics alter gut microbiota composition (specifically promoting Lactobacillus, Bifidobacterium, Akkermansia spp.).68 Outcomes = significant reduction in HOMA-IR, lowered androgen levels, elevated SHBG transcription, and reduced serum hs-CRP (Standardized Mean Difference 1.26 in PMOS vs controls).69
+13.5 Melatonin and Coenzyme Q10
+Meta-analyses highlight melatonin as a powerful intra-ovarian antioxidant. Melatonin ameliorates mitochondrial membrane damage via SIRT1/PDK1/Akt pathway activation.19 Melatonin regulates GC autophagy, preserving follicle viability. Coenzyme Q10 + Vitamin E RCT meta-analyses show significant improvements in hormonal profiling via reduction of intrafollicular ROS.20
+
+
+Intervention Class
+	Primary Mechanism of Action
+	Meta-Analytic Outcomes (2021-2026)
+	GLP-1 RAs
+	GLP-1 receptor activation, delayed gastric emptying
+	Superior HOMA-IR reduction vs Metformin; massive BMI decrease 13
+	Metformin + TZDs
+	AMPK activation + PPAR-y agonism
+	Synergistic IR resolution; superior testosterone reduction vs monotherapy 67
+	Inositols
+	Inositolphosphoglycan second messenger repletion
+	Bypasses IRS-1 block; normalizes LH/FSH ratio; restores ovulation 8
+	Probiotics
+	Microbiota modulation; TLR4/LPS suppression
+	Decreased hs-CRP; elevated SHBG; reduced systemic lipotoxicity 69
+	Melatonin
+	SIRT1/PDK1/Akt pathway activation
+	Reduces ROS-mediated CYP17A1 upregulation; prevents GC apoptosis 19
+	14. Synthesis of Pathophysiological Continuum
+The diagnostic transition from PMOS to PMOS structurally encapsulates the disorder as a complete systemic metabolic-endocrine failure.1 Disease onset requires a collision of genetic predispositions (INSR, IRS-1, DENND1A.V2 variants) and environmental triggers (obesity, hypercaloric diet, lipotoxicity).6 This collision induces severe systemic peripheral IR.9 Pathological serine phosphorylation (Ser307/312) of IRS-1 blocks glucose disposal within skeletal muscle and adipose tissue.18 The pancreatic beta-cells detect resulting hyperglycemia and compensate via immense, sustained insulin hypersecretion.35
+Compensatory hyperinsulinemia executes three simultaneous, devastating pathophysiological strikes across distinct organ systems:
+1. Hepatic Blockade & SHBG Collapse: Insulin interacts with SREBP-1c-driven de novo lipogenesis to extinguish HNF-4a expression in the liver. Concurrently, DNL upregulates PPAR-y. PPAR-y dominates the SHBG promoter. SHBG transcription terminates. Circulating SHBG plummets. Free testosterone surges.28
+2. Neuroendocrine Overdrive: Insulin crosses the blood-brain barrier. Insulin potentiates KNDy neuron activity in the arcuate nucleus. Kisspeptin and NKB expression surge. GnRH pulse frequency accelerates to pathological speeds. The pituitary responds by hyper-secreting LH. LH massively outweighs FSH.13
+3. Theca Cell Hyperstimulation: Ovarian theca cells uniquely retain absolute insulin sensitivity via intact PI3K/Akt and MAPK pathways.23 LH binds LHCGR, activating cAMP/PKA. Insulin binds INSR, activating Akt. Akt phosphorylates FOXO1, driving nuclear exclusion. Together, LH + Insulin synergistically supercharge CYP17A1 gene transcription and 17a-hydroxylase/17,20-lyase enzyme activity.52 Theca cells undergo hyperthecosis. TCs flood the local ovarian microenvironment and systemic circulation with massive volumes of androstenedione and testosterone.48
+Intra-ovarian hyperandrogenism + massive AMH secretion paralyzes granulosa cells.13 FSHR signaling fails. Aromatase (CYP19A1) shuts down. Estrogen synthesis drops. Follicles arrest at the pre-antral stage.14 Arrested follicles accumulate, yielding classic polycystic ovarian morphology.13 Systemically, elevated androgens act on adipose tissue (via AKR1C3 conversion) and the central nervous system to ruthlessly exacerbate total-body IR. This cements an unbreakable, self-perpetuating cycle of metabolic and reproductive collapse.33 Targeting the root hyperinsulinemia—via GLP-1 RAs, TZDs, Inositols, or specific metabolic modulators—remains the sole definitive mechanism capable of arresting the PMOS pathophysiological cascade.7
+Works cited
+1. PMOS Renamed PMOS in Landmark Consensus Published in The ..., accessed May 15, 2026, https://www.patientcareonline.com/view/pmos-renamed-pmos-in-landmark-consensus-published-in-the-lancet
+2. Polyendocrine Metabolic Ovarian Syndrome: New name to improve diagnosis and care of condition affecting 170 million women worldwide | EurekAlert!, accessed May 15, 2026, https://www.eurekalert.org/news-releases/1127647
+3. Global consensus renames PMOS to polyendocrine metabolic ovarian syndrome (PMOS), accessed May 15, 2026, https://www.contemporaryobgyn.net/view/global-consensus-renames-pmos-to-polyendocrine-metabolic-ovarian-syndrome-pmos-
+4. Research progress on insulin resistance in polycystic ovary syndrome | Reproductive and Developmental Medicine - MedNexus, accessed May 15, 2026, https://mednexus.org/doi/10.1097/RD9.0000000000000131
+5. Role of insulin and insulin resistance in androgen excess disorders - PMC - NIH, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC8107978/
+6. The Pathogenesis of Polycystic Ovary Syndrome (PMOS): The Hypothesis of PMOS as Functional Ovarian Hyperandrogenism Revisited - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC5045492/
+7. Recognizing the Role of Insulin Resistance in Polycystic Ovary Syndrome: A Paradigm Shift from a Glucose-Centric Approach to an Insulin-Centric Model - MDPI, accessed May 15, 2026, https://www.mdpi.com/2077-0383/14/12/4021
+8. PMOS drug pipeline: 40+ clinical trials and approaches | PatSnap, accessed May 15, 2026, https://www.patsnap.com/resources/blog/articles/pmos-drug-pipeline-40-clinical-trials-and-approaches/
+9. The pathogenesis, therapeutic targets and drugs of polycystic ovary syndrome - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC12883396/
+10. Metabolic Implications of PMOS - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC12931838/
+11. Insulin resistance, metabolic syndrome and polycystic ovaries: an intriguing conundrum, accessed May 15, 2026, https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2025.1669716/full
+12. Signaling pathways and targeted therapeutic strategies for polycystic ovary syndrome, accessed May 15, 2026, https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2023.1191759/full
+13. Reappraising the relationship between hyperinsulinemia and insulin resistance in PMOS in, accessed May 15, 2026, https://joe.bioscientifica.com/view/journals/joe/265/2/JOE-24-0269.xml
+14. Androgen excess: a hallmark of polycystic ovary syndrome - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC10751361/
+15. Molecular mechanisms of insulin resistance and altered carbohydrate metabolism in PMOS: a scoping review - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/42051446/
+16. The role of insulin signaling with FOXO and FOXK transcription factors - PMC - NIH, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC11778369/
+17. Molecular mechanisms of insulin resistance and altered carbohydrate metabolism in PMOS: a scoping review - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC13111087/
+18. Molecular Mechanisms in the Etiology of Polycystic Ovary Syndrome (PMOS): A Multifaceted Hypothesis Towards the Disease with Potential Therapeutics - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC10784448/
+19. Signaling pathways and targeted therapeutic strategies for polycystic ovary syndrome - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC10622806/
+20. Insulin resistance in polycystic ovary syndrome across various tissues: an updated review of pathogenesis, evaluation, and treatment - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC9832677/
+21. Pathogenesis of Polycystic Ovary Syndrome (PMOS): The Hypothesis of PMOS as Functional Ovarian Hyperandrogenism Revisited | Endocrine Reviews | Oxford Academic, accessed May 15, 2026, https://academic.oup.com/edrv/article/37/5/467/2567094
+22. Targeting Polycystic Ovary Syndrome (PMOS) Pathophysiology with Flavonoids: From Adipokine–Cytokine Crosstalk to Insulin Resistance and Reproductive Dysfunctions - MDPI, accessed May 15, 2026, https://www.mdpi.com/1424-8247/18/10/1575
+23. Molecular mechanisms of insulin resistance in polycystic ovary syndrome - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/16769248/
+24. Perturbations in Lineage Specification of Granulosa and Theca Cells May Alter Corpus Luteum Formation and Function - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC6895843/
+25. Resistance to the Insulin and Elevated Level of Androgen: A Major Cause of Polycystic Ovary Syndrome - Frontiers, accessed May 15, 2026, https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2021.741764/full
+26. Studies of Foxo1 over the Past 25 Years: Mechanisms of Insulin Resistance and Glucose Dysregulation - MDPI, accessed May 15, 2026, https://www.mdpi.com/2073-4409/15/2/109
+27. Regulation of Cyp17a1 expression in mouse ovarian theca cells in vivo and in vitro, accessed May 15, 2026, https://www.endocrine-abstracts.org/ea/0038/ea0038p371
+28. Sex Hormone-Binding Globulin (SHBG) as an Early Biomarker and Therapeutic Target in Polycystic Ovary Syndrome - MDPI, accessed May 15, 2026, https://www.mdpi.com/1422-0067/21/21/8191
+29. Sex Hormone-Binding Globulin (SHBG) Reduction: The Alarm Bell for the Risk of Non-Alcoholic Fatty Liver Disease in Adolescents with Polycystic Ovary Syndrome - MDPI, accessed May 15, 2026, https://www.mdpi.com/2227-9067/9/11/1748
+30. Polycystic Ovarian Syndrome - StatPearls - NCBI Bookshelf, accessed May 15, 2026, https://www.ncbi.nlm.nih.gov/books/NBK459251/
+31. Insulin and hyperandrogenism in women with polycystic ovary syndrome - PMC - NIH, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC3846536/
+32. Polycystic Ovary Syndrome in Insulin-Resistant Adolescents with Obesity: The Role of Nutrition Therapy and Food Supplements as a Strategy to Protect Fertility - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC8228678/
+33. Adipose-androgen crosstalk in polycystic ovary syndrome: mechanisms and therapeutic implications - Frontiers, accessed May 15, 2026, https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2025.1731179/full
+34. Molecular mechanisms of insulin resistance and altered carbohydrate metabolism in PMOS: a scoping review - Frontiers, accessed May 15, 2026, https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1810805/full
+35. Ovarian insulin signaling is intact despite systemic insulin resistance in a mouse model of polycystic ovary syndrome - Oxford Academic, accessed May 15, 2026, https://academic.oup.com/endo/advance-article-pdf/doi/10.1210/endocr/bqag025/67282339/bqag025.pdf
+36. Full article: Effect of Sex Hormone-Binding Globulin on Polycystic Ovary Syndrome: Mechanisms, Manifestations, Genetics, and Treatment - Taylor & Francis, accessed May 15, 2026, https://www.tandfonline.com/doi/full/10.2147/IJWH.S344542
+37. The contribution of hyperinsulinemia to the hyperandrogenism of polycystic ovary syndrome | Pateguana | Journal of Metabolic Health, accessed May 15, 2026, https://journalofmetabolichealth.org/index.php/jmh/article/view/50
+38. Effect of Sex Hormone-Binding Globulin on Polycystic Ovary Syndrome: Mechanisms, Manifestations, Genetics, and Treatment - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC8818772/
+39. Ovarian insulin signaling is intact despite systemic insulin resistance ..., accessed May 15, 2026, https://academic.oup.com/endo/advance-article/doi/10.1210/endocr/bqag025/8512496
+40. Insulin Resistance and the Polycystic Ovary Syndrome Revisited: An Update on Mechanisms and Implications - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC5393155/
+41. Insulin signaling in ovarian thecal cells and proposed mechanisms for... - ResearchGate, accessed May 15, 2026, https://www.researchgate.net/figure/Insulin-signaling-in-ovarian-thecal-cells-and-proposed-mechanisms-for-selective-insulin_fig2_259933427
+42. Insulin stimulates testosterone biosynthesis by human thecal cells from women with polycystic ovary syndrome by activating its own receptor and using inositolglycan mediators as the signal transduction system - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/9626131/
+43. Key signalling pathways underlying the aetiology of polycystic ovary syndrome in, accessed May 15, 2026, https://joe.bioscientifica.com/view/journals/joe/255/1/JOE-22-0059.xml
+44. Precision Targeted Therapy for PMOS: Emerging Drugs, Translational Challenges, and Future Opportunities - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC12839070/
+45. In Search of New Therapeutics—Molecular Aspects of the PMOS Pathophysiology: Genetics, Hormones, Metabolism and Beyond - MDPI, accessed May 15, 2026, https://www.mdpi.com/1422-0067/21/19/7054
+46. Polycystic ovary syndrome: pathophysiology and therapeutic opportunities | BMJ Medicine, accessed May 15, 2026, https://bmjmedicine.bmj.com/content/2/1/e000548
+47. An update of genetic basis of PMOS pathogenesis - PMC - NIH, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC10118782/
+48. Polycystic ovary syndrome: pathophysiology and therapeutic opportunities - PMC - NIH, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC10583117/
+49. CYP17A1 Network Analysis in Ovarian Serous Cystadenocarcinoma for Retrieval of Polycystic ovaries Targets - Semantic Scholar, accessed May 15, 2026, https://pdfs.semanticscholar.org/5790/caeed7419b2199741dd90af303961047bbc8.pdf
+50. Interactive Stimulation by Luteinizing Hormone and Insulin of the Steroidogenic Acute Regulatory (StAR) Protein and 17α-Hydroxylase/17, 20-Lyase (CYP17) Genes in Porcine Theca Cells* | Endocrinology | Oxford Academic, accessed May 15, 2026, https://academic.oup.com/endo/article/141/8/2735/2988268
+51. Requirement for Proximal Putative Sp1 and AP-2 cis-Deoxyribonucleic Acid Elements in Mediating Basal and Luteinizing Hormone- and Insulin-Dependent in Vitro Transcriptional Activation of the CYP17 Gene in Porcine Theca Cells | Endocrinology | Oxford Academic, accessed May 15, 2026, https://academic.oup.com/endo/article/145/6/2760/2878262
+52. Interactive stimulation by luteinizing hormone and insulin of the steroidogenic acute regulatory (StAR) protein and 17alpha-hydroxylase/17,20-lyase (CYP17) genes in porcine theca cells - PubMed, accessed May 15, 2026, https://pubmed.ncbi.nlm.nih.gov/10919257/
+53. Decoding androgen excess in polycystic ovary syndrome: Roles of insulin resistance and other key intraovarian and systemic factors - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC12278101/
+54. Special Considerations on Insulin Resistance Induced Hyperandrogenemia in Women with Polycystic Ovary Syndrome, accessed May 15, 2026, http://ijmcmed.org/article-1-1901-en.pdf
+55. Involvement of Transcription Factor FoxO1 in the Pathogenesis of Polycystic Ovary Syndrome - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC7973228/
+56. GATA Regulation and Function During the Ovarian Life Cycle - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC12057165/
+57. A functional link between bone morphogenetic proteins and insulin-like peptide 3 signaling in modulating ovarian androgen production - CentAUR, accessed May 15, 2026, https://centaur.reading.ac.uk/31263/
+58. Dysregulated Liver Metabolism and Polycystic Ovarian Syndrome - MDPI, accessed May 15, 2026, https://www.mdpi.com/1422-0067/24/8/7454
+59. Decoding androgen excess in polycystic ovary syndrome: Roles of insulin resistance and other key intraovarian and systemic factors - Baishideng Publishing Group, accessed May 15, 2026, https://www.wjgnet.com/1948-9358/full/v16/i7/108789.htm
+60. Defective insulin signaling and the protective effects of dimethyldiguanide during follicular development in the ovaries of polycystic ovary syndrome - Spandidos Publications, accessed May 15, 2026, https://www.spandidos-publications.com/10.3892/mmr.2017.7678
+61. The pathogenesis, therapeutic targets and drugs of polycystic ovary syndrome - Frontiers, accessed May 15, 2026, https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2025.1722649/full
+62. Alternative splicing of DENND1A, a PMOS candidate gene, generates variant 2 - PMC - NIH, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC4983473/
+63. Researchers identify a gene that causes excessive androgen production in PMOS - Penn State Health News, accessed May 15, 2026, https://pennstatehealthnews.org/2014/03/researchers-identify-a-gene-that-causes-excessive-androgen-production-in-pmos/
+64. Endocrine Disrupting Chemicals in Polycystic Ovary Syndrome: The Relevant Role of the Theca and Granulosa Cells in the Pathogenesis of the Ovarian Dysfunction - MDPI, accessed May 15, 2026, https://www.mdpi.com/2073-4409/12/1/174
+65. Gene regulatory activity associated with PMOS revealed DENND1A-dependent testosterone production - bioRxiv, accessed May 15, 2026, https://www.biorxiv.org/content/10.1101/2024.05.23.595551v1.full.pdf
+66. Endocrine and metabolic effects of GLP-1 receptor agonists on women with PMOS, a narrative review in, accessed May 15, 2026, https://ec.bioscientifica.com/view/journals/ec/14/5/EC-24-0529.xml
+67. Polycystic Ovary Syndrome: Etiology, Current Management, and Future Therapeutics - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC9964744/
+68. Effects of supplementation with two probiotic strains on metabolic profile, hormonal status, oxidative stress, and quality of life in women with polycystic ovary syndrome: A study protocol for a randomized clinical trial - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC12883012/
+69. Effects of Probiotic Supplementation on Mental Health and the Risk of Depression in Women with Polycystic Ovary Syndrome: A Systematic Review of Randomized Controlled Trials - ResearchGate, accessed May 15, 2026, https://www.researchgate.net/publication/399902157_Effects_of_Probiotic_Supplementation_on_Mental_Health_and_the_Risk_of_Depression_in_Women_with_Polycystic_Ovary_Syndrome_A_Systematic_Review_of_Randomized_Controlled_Trials
+70. The Impact of Lifestyle on Reproductive Health: Microbial Complexity, Hormonal Dysfunction, and Pregnancy Outcomes - MDPI, accessed May 15, 2026, https://www.mdpi.com/1422-0067/26/17/8574
+71. Risk factors for insulin resistance related to polycystic ovarian syndrome in Iranian population - PMC, accessed May 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC10290663/

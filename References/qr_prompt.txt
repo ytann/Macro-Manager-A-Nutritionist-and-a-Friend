@@ -1,0 +1,15 @@
+'/home/ytann/Desktop/AI-Projects/Macro-Manager/Macro-Manager: The PMOS Nutritionist and Friend/barcode_decoder.py' I want to add a couple of more                                              
+  ┃  features to this - 1. Scanning the data from the barcode of packed products and getting thier nutritional values - I have the code for it tagged       Context                                 
+  ┃  above - which you can directly use it as per my knowledge - How it works: in the UI, we click on photo tab, and it has now choices of a. image, b.     21,163 tokens                           
+  ┃  barcode, c. product label (we will come to this in a bit), we click on the barcode one, it opens the same gallery/click from camera (how it is         8% used                                 
+  ┃  currently for photo), and we click the photo of the barcode, it then uses the file attached to find the details of it, and then checks a. if we        $0.00 spent                             
+  ┃  have it in the database, we return it, b. if we don't have it in the database we can openfoodfact's free API and see if there's anything there, c.                                             
+  ┃  Fall back to Tavily, d. use LLM because have the product name and then setup sync queue - since this is from the barcode, except for the LLM part      LSP                                     
+  ┃  we enter this data into our database with verified flag = 1, we will also give a UI input for the user to put amount consumed so that we can           LSPs are disabled                       
+  ┃  immediately log it as well, ofc provide the breakfast, lunch, snacks, dinner drop down like everywhere else. Similarly, 2. We can use an OCR along                                             
+  ┃  with gemma e2b's vision capabilities to extract nutrional information from the packet's label. If the OCR doesn't work we use gemma as fall back,                                              
+  ┃  since this is directly coming from the label, we should be able to directly add it to the database as verified = 1;  In both cases, we need to                                                 
+  ┃  provide a block for the user to put the name (optional ofc, we will try to guess anyways, but if user entry then that), and the quantity consumed,                                             
+  ┃  so that they can log it immediately. MAKE SURE, WHATEVER DATA WE GET, WE MUST NORMALIZE IT FOR PER 100G BEFORE ENTERING IT IN THE DATABASE. PLAN                                               
+  ┃  AN EXECUTION FOR THIS WITH PRECISELY WHICH FILES NEEDS TO BE CHANGED, WHAT ALL NEEDS TO BE DONE, and we will only make changes there. BE EXTREMELY                                             
+  ┃  PRECISE. ASK ME ANY QUESTIONS THAT YOU MAY HAVE REGARDING THIS 

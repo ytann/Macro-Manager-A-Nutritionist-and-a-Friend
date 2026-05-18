@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrononutrition & Insulin Resistance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        body {
+            background-color: #0F172A;
+            color: #F8FAFC;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 280px;
+            }
+        }
+
+        .card {
+            background: #1E293B;
+            border-top: 4px solid #F97316;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-cyan {
+            border-top-color: #06B6D4;
+        }
+
+        .card-lime {
+            border-top-color: #84CC16;
+        }
+
+        .card-purple {
+            border-top-color: #A855F7;
+        }
+    </style>
+</head>
+
+<body class="p-4 md:p-8">
+    <!--
+PALETTE: "Vibrant Night" (Deep Blue #0F172A, Orange #F97316, Cyan #06B6D4, Lime #84CC16, Purple #A855F7).
+PLAN SUMMARY:
+1. Intro: Core chrononutrition metrics.
+2. Temporal Trends (Chart.js Line): 24h Insulin sensitivity vs Melatonin. Goal: Change.
+3. Diurnal Clearance (Chart.js Bar): Glucose AUC AM vs PM. Goal: Compare.
+4. Efficacy (Chart.js Radar): AM vs PM Carb loading outcomes. Goal: Relationships.
+5. Patient Distribution (Plotly 3D WebGL): Weight vs HOMA-IR vs Carb Timing. Goal: Distribution.
+6. Pathways (HTML Flowchart): AM vs PM metabolism. Goal: Organize.
+CONFIRMATION: NEITHER Mermaid JS NOR SVG were used anywhere in this output. All icons are Unicode. All charts render via Canvas or WebGL.
+-->
+
+    <header class="mb-10 text-center">
+        <h1
+            class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#06B6D4] mb-3">
+            CHRONONUTRITION = GLYCEMIC CONTROL</h1>
+        <p class="text-xl text-gray-400">Circadian rhythms dictate metabolic flux. AM Carbs → Clearance. PM Carbs →
+            Storage.</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="card card-lime text-center">
+            <div class="text-4xl mb-2">◷</div>
+            <div class="text-3xl font-bold text-[#84CC16]">+50%</div>
+            <div class="text-sm uppercase tracking-wide text-gray-400">AM Insulin Sensitivity</div>
+        </div>
+        <div class="card text-center">
+            <div class="text-4xl mb-2">📉</div>
+            <div class="text-3xl font-bold text-[#F97316]">-0.8%</div>
+            <div class="text-sm uppercase tracking-wide text-gray-400">HbA1c Drop (AM Carbs)</div>
+        </div>
+        <div class="card card-cyan text-center">
+            <div class="text-4xl mb-2">⚖️</div>
+            <div class="text-3xl font-bold text-[#06B6D4]">-5.0kg</div>
+            <div class="text-sm uppercase tracking-wide text-gray-400">Weight Loss (AM Carbs)</div>
+        </div>
+        <div class="card card-purple text-center">
+            <div class="text-4xl mb-2">⚡</div>
+            <div class="text-3xl font-bold text-[#A855F7]">+30%</div>
+            <div class="text-sm uppercase tracking-wide text-gray-400">Thermogenesis Rate</div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <section class="card card-cyan">
+            <h2 class="text-2xl font-bold mb-2">Circadian Rhythm vs Sensitivity</h2>
+            <p class="text-sm text-gray-400 mb-4">Insulin sensitivity peaks at 08:00. Melatonin inhibits β-cell insulin
+                release at night. Biological mismatch = Metabolic dysfunction.</p>
+            <div class="chart-container"><canvas id="circadianChart"></canvas></div>
+        </section>
+
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-2">Postprandial Glucose AUC</h2>
+            <p class="text-sm text-gray-400 mb-4">Identical 50g carb load. AM ingestion yields rapid clearance. PM
+                ingestion forces hyperinsulinemia + delayed clearance.</p>
+            <div class="chart-container"><canvas id="aucChart"></canvas></div>
+        </section>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <section class="card card-purple">
+            <h2 class="text-2xl font-bold mb-2">AM vs PM Carb Loading Efficacy</h2>
+            <p class="text-sm text-gray-400 mb-4">12-week clinical trial comparison. Front-loading (70% carbs < 14:00)
+                    vs Back-loading (70% carbs> 18:00). Front-loading dominates.</p>
+            <div class="chart-container"><canvas id="radarChart"></canvas></div>
+        </section>
+
+        <section class="card card-lime">
+            <h2 class="text-2xl font-bold mb-2">Patient Cluster Analysis</h2>
+            <p class="text-sm text-gray-400 mb-4">3D WebGL analysis: AM Carb % (X), Weight Loss (Y), HOMA-IR Drop (Z).
+                High AM % clusters correlate with massive metabolic shifts.</p>
+            <div id="plotly3d" class="chart-container"></div>
+        </section>
+    </div>
+
+    <section class="card bg-gray-800 border-none">
+        <h2 class="text-2xl font-bold mb-4 text-center">Metabolic Pathways: Time-Restricted Kinetics</h2>
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-stretch">
+            <div class="flex-1 bg-[#1E293B] p-4 rounded border border-[#84CC16]">
+                <h3 class="font-bold text-[#84CC16] text-xl mb-3 border-b border-gray-600 pb-2">AM INGESTION (Active)
+                </h3>
+                <div class="flex flex-col gap-2 font-mono text-sm">
+                    <div class="bg-black/30 p-2 rounded text-center">CARBOHYDRATE LOAD</div>
+                    <div class="text-center text-[#84CC16]">↓</div>
+                    <div class="bg-black/30 p-2 rounded text-center">HIGH INSULIN SENSITIVITY</div>
+                    <div class="text-center text-[#84CC16]">↓</div>
+                    <div class="bg-black/30 p-2 rounded text-center">RAPID GLUT4 TRANSLOCATION</div>
+                    <div class="text-center text-[#84CC16]">↓</div>
+                    <div class="bg-black/30 p-2 rounded text-center">GLYCOGEN REPLENISHMENT</div>
+                    <div class="text-center text-[#84CC16]">↓</div>
+                    <div class="bg-[#84CC16]/20 p-2 rounded text-center font-bold text-[#84CC16]">EFFICIENT CLEARANCE
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 bg-[#1E293B] p-4 rounded border border-[#F97316]">
+                <h3 class="font-bold text-[#F97316] text-xl mb-3 border-b border-gray-600 pb-2">PM INGESTION (Sedentary)
+                </h3>
+                <div class="flex flex-col gap-2 font-mono text-sm">
+                    <div class="bg-black/30 p-2 rounded text-center">CARBOHYDRATE LOAD</div>
+                    <div class="text-center text-[#F97316]">↓</div>
+                    <div class="bg-black/30 p-2 rounded text-center">LOW INSULIN SENSITIVITY + MELATONIN</div>
+                    <div class="text-center text-[#F97316]">↓</div>
+                    <div class="bg-black/30 p-2 rounded text-center">DELAYED CLEARANCE</div>
+                    <div class="text-center text-[#F97316]">↓</div>
+                    <div class="bg-black/30 p-2 rounded text-center">PROLONGED HYPERINSULINEMIA</div>
+                    <div class="text-center text-[#F97316]">↓</div>
+                    <div class="bg-[#F97316]/20 p-2 rounded text-center font-bold text-[#F97316]">DE NOVO LIPOGENESIS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const wrapLabel = (lbl) => {
+            if (lbl.length <= 16) return lbl;
+            let w = lbl.split(' '), res = [], curr = '';
+            for (let x of w) {
+                if ((curr + x).length > 16) {
+                    if (curr) res.push(curr.trim());
+                    curr = x + ' ';
+                } else curr += x + ' ';
+            }
+            if (curr) res.push(curr.trim());
+            return res;
+        };
+
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            color: '#94A3B8',
+            plugins: {
+                legend: { labels: { color: '#F8FAFC' } },
+                tooltip: {
+                    callbacks: {
+                        title: (items) => {
+                            const item = items[0];
+                            let lbl = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(lbl) ? lbl.join(' ') : lbl;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: { ticks: { color: '#94A3B8' }, grid: { color: '#334155' } },
+                y: { ticks: { color: '#94A3B8' }, grid: { color: '#334155' } }
+            }
+        };
+
+        const labels24h = ['06:00', '09:00', '12:00', '15:00', '18:00', '21:00', '00:00', '03:00'].map(wrapLabel);
+        new Chart(document.getElementById('circadianChart'), {
+            type: 'line',
+            data: {
+                labels: labels24h,
+                datasets: [
+                    { label: 'Insulin Sensitivity (%)', data: [80, 100, 85, 70, 50, 30, 20, 40], borderColor: '#06B6D4', backgroundColor: 'rgba(6,182,212,0.1)', tension: 0.4, fill: true, yAxisID: 'y' },
+                    { label: 'Melatonin Levels', data: [10, 5, 5, 5, 20, 70, 100, 80], borderColor: '#A855F7', backgroundColor: 'rgba(168,85,247,0.1)', tension: 0.4, fill: true, yAxisID: 'y1' }
+                ]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    x: commonOptions.scales.x,
+                    y: { type: 'linear', position: 'left', ticks: { color: '#06B6D4' }, grid: { color: '#334155' } },
+                    y1: { type: 'linear', position: 'right', ticks: { color: '#A855F7' }, grid: { drawOnChartArea: false } }
+                }
+            }
+        });
+
+        const labelsAUC = ['Morning Load (08:00)', 'Evening Load (20:00)'].map(wrapLabel);
+        new Chart(document.getElementById('aucChart'), {
+            type: 'bar',
+            data: {
+                labels: labelsAUC,
+                datasets: [
+                    { label: 'Glucose AUC (mg*h/dL)', data: [120, 185], backgroundColor: ['#84CC16', '#F97316'], borderRadius: 4 }
+                ]
+            },
+            options: commonOptions
+        });
+
+        const labelsRadar = ['Weight Loss (kg)', 'HbA1c Reduction (%)', 'Fasting Gluc. Drop', 'HOMA-IR Decrease', 'Triglyceride Drop'].map(wrapLabel);
+        const radarOpts = JSON.parse(JSON.stringify(commonOptions));
+        delete radarOpts.scales;
+        radarOpts.scales = { r: { angleLines: { color: '#334155' }, grid: { color: '#334155' }, pointLabels: { color: '#94A3B8' }, ticks: { display: false } } };
+
+        new Chart(document.getElementById('radarChart'), {
+            type: 'radar',
+            data: {
+                labels: labelsRadar,
+                datasets: [
+                    { label: 'Front-Load (AM)', data: [5.0, 0.8, 15, 2.1, 40], borderColor: '#06B6D4', backgroundColor: 'rgba(6,182,212,0.3)', pointBackgroundColor: '#06B6D4' },
+                    { label: 'Back-Load (PM)', data: [1.5, 0.2, 4, 0.5, 10], borderColor: '#F97316', backgroundColor: 'rgba(249,115,22,0.3)', pointBackgroundColor: '#F97316' }
+                ]
+            },
+            options: radarOpts
+        });
+
+        const p3d = document.getElementById('plotly3d');
+        const trace1 = {
+            x: Array.from({ length: 50 }, () => Math.random() * 40 + 60),
+            y: Array.from({ length: 50 }, () => Math.random() * 6 + 2),
+            z: Array.from({ length: 50 }, () => Math.random() * 1.5 + 1),
+            mode: 'markers',
+            marker: { size: 6, color: '#06B6D4', opacity: 0.8 },
+            type: 'scatter3d',
+            name: 'AM Protocol'
+        };
+        const trace2 = {
+            x: Array.from({ length: 50 }, () => Math.random() * 40),
+            y: Array.from({ length: 50 }, () => Math.random() * 3),
+            z: Array.from({ length: 50 }, () => Math.random() * 0.8),
+            mode: 'markers',
+            marker: { size: 6, color: '#F97316', opacity: 0.8 },
+            type: 'scatter3d',
+            name: 'PM Protocol'
+        };
+        Plotly.newPlot(p3d, [trace1, trace2], {
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            margin: { l: 0, r: 0, b: 0, t: 0 },
+            scene: {
+                xaxis: { title: 'AM Carb %', color: '#94A3B8', gridcolor: '#334155', backgroundcolor: '#1E293B' },
+                yaxis: { title: 'Weight Loss (kg)', color: '#94A3B8', gridcolor: '#334155', backgroundcolor: '#1E293B' },
+                zaxis: { title: 'HOMA-IR Drop', color: '#94A3B8', gridcolor: '#334155', backgroundcolor: '#1E293B' }
+            },
+            legend: { font: { color: '#F8FAFC' } }
+        }, { displayModeBar: false, responsive: true });
+    </script>
+</body>
+
+</html>

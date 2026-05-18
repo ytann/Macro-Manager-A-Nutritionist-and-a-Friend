@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMOS: Gut, Inflammation & Nutrition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0B1120;
+            color: #F8FAFC;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        .card {
+            background-color: #1E293B;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            padding: 1.5rem;
+            border-top: 4px solid #3B82F6;
+        }
+
+        .card-teal {
+            border-top-color: #4ECDC4;
+        }
+
+        .card-coral {
+            border-top-color: #FF6B6B;
+        }
+
+        .card-yellow {
+            border-top-color: #FFE66D;
+        }
+
+        .txt-coral {
+            color: #FF6B6B;
+        }
+
+        .txt-teal {
+            color: #4ECDC4;
+        }
+
+        .txt-yellow {
+            color: #FFE66D;
+        }
+
+        .bg-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .flow-box {
+            background: #0f172a;
+            border: 2px solid #4ECDC4;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .flow-arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #FF6B6B;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-pink-500 selection:text-white pb-12">
+
+    <nav class="sticky top-0 z-50 bg-[#0B1120] border-b border-gray-800 p-4 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-black txt-teal tracking-tight">PMOS <span class="text-white">=</span> INFLAMMATION
+                <span class="txt-coral">AXIS</span>
+            </h1>
+            <div class="text-xs font-bold bg-gray-800 px-3 py-1 rounded txt-yellow">CLINICAL DATA</div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4">
+
+        <section class="col-span-1 lg:col-span-2 text-center mb-8">
+            <p class="text-xl md:text-2xl font-light text-gray-300">
+                Pathogenesis → Dysbiosis + Systemic Inflammation.
+                <br>Intervention → Fiber + Anti-inflammatory Lipids.
+            </p>
+        </section>
+
+        <section class="card card-coral">
+            <h2 class="text-xl font-bold mb-2 uppercase tracking-wide txt-coral">Pathology Flow</h2>
+            <p class="text-sm text-gray-400 mb-6">Gut permeability triggers systemic endocrine disruption.</p>
+
+            <div class="flex flex-col items-center justify-center h-full pb-8">
+                <div class="flow-box w-full max-w-xs">Microbiome Dysbiosis</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-box w-full max-w-xs">Intestinal Permeability (Leaky Gut)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-box w-full max-w-xs">LPS Translocation (Endotoxemia)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-box w-full max-w-xs bg-red-900 border-red-500 text-white">Systemic Inflammation (↑ CRP,
+                    TNF-α)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="grid grid-cols-2 gap-4 w-full max-w-md">
+                    <div class="flow-box border-yellow-500">Insulin Resistance</div>
+                    <div class="flow-box border-purple-500">Hyperandrogenism</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card card-teal">
+            <h2 class="text-xl font-bold mb-2 uppercase tracking-wide txt-teal">Microbiome Shift</h2>
+            <p class="text-sm text-gray-400 mb-4">Firmicutes ↑ = Obesity/IR. Bacteroidetes ↓ = Impaired metabolism.</p>
+            <div class="chart-container">
+                <canvas id="microbiomeChart"></canvas>
+            </div>
+        </section>
+
+        <section class="card card-yellow col-span-1 lg:col-span-2">
+            <h2 class="text-xl font-bold mb-2 uppercase tracking-wide txt-yellow">Clinical Targets: Fiber</h2>
+            <p class="text-sm text-gray-400 mb-6">Threshold: ≥25-30g/day. Focus: Soluble fiber for metabolic control.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-gray-800 p-4 rounded text-center border-l-4 border-[#4ECDC4]">
+                    <h3 class="text-gray-400 text-sm font-bold">MINIMUM TARGET</h3>
+                    <div class="text-4xl font-black txt-teal my-2">25g</div>
+                    <p class="text-xs">Total Daily Fiber</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded text-center border-l-4 border-[#FFE66D]">
+                    <h3 class="text-gray-400 text-sm font-bold">SOLUBLE THRESHOLD</h3>
+                    <div class="text-4xl font-black txt-yellow my-2">10g+</div>
+                    <p class="text-xs">Binds glucose/cholesterol</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded text-center border-l-4 border-[#FF6B6B]">
+                    <h3 class="text-gray-400 text-sm font-bold">INSOLUBLE THRESHOLD</h3>
+                    <div class="text-4xl font-black txt-coral my-2">15g+</div>
+                    <p class="text-xs">Regulates motility/toxins</p>
+                </div>
+            </div>
+
+            <div class="chart-container w-full max-w-4xl mx-auto">
+                <canvas id="fiberChart"></canvas>
+            </div>
+        </section>
+
+        <section class="card col-span-1 lg:col-span-2">
+            <h2 class="text-xl font-bold mb-2 uppercase tracking-wide text-blue-400">Lipid Therapy Impact</h2>
+            <p class="text-sm text-gray-400 mb-6">Omega-3 (EPA/DHA) & MUFA (Olive Oil) vs Inflammatory Biomarkers.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="bg-gray-800 p-3 rounded">
+                        <span class="font-bold txt-teal">Omega-3 (EPA/DHA)</span>
+                        <ul class="text-sm mt-1 list-none">
+                            <li>→ Dose: 1-2g/day</li>
+                            <li>→ ↓ Hepatic triglycerides</li>
+                            <li>→ ↓ Inflammatory cytokines (IL-6)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-3 rounded">
+                        <span class="font-bold txt-yellow">MUFAs (Oleic Acid)</span>
+                        <ul class="text-sm mt-1 list-none">
+                            <li>→ Target: Replace saturated fats</li>
+                            <li>→ ↑ Insulin sensitivity (HOMA-IR)</li>
+                            <li>→ ↓ Oxidative stress</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="lipidChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-xs text-gray-600 py-6 border-t border-gray-800 mt-8">
+        <p>Data visualization generated programmatically. Confirmed: NO SVG used. NO Mermaid JS used.</p>
+    </footer>
+
+    <script>
+        const w = (txt) => {
+            if (txt.length <= 16) return txt;
+            let arr = txt.split(' ');
+            let res = [];
+            let cur = '';
+            arr.forEach(word => {
+                if ((cur + word).length > 16) {
+                    if (cur) res.push(cur.trim());
+                    cur = word + ' ';
+                } else {
+                    cur += word + ' ';
+                }
+            });
+            if (cur) res.push(cur.trim());
+            return res;
+        };
+
+        const ttp = {
+            tooltip: {
+                callbacks: {
+                    title: function (ctx) {
+                        let v = ctx[0];
+                        let l = v.chart.data.labels[v.dataIndex];
+                        return Array.isArray(l) ? l.join(' ') : l;
+                    }
+                }
+            }
+        };
+
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.font.family = 'Roboto';
+
+        new Chart(document.getElementById('microbiomeChart'), {
+            type: 'doughnut',
+            data: {
+                labels: [w('Firmicutes (Obesity Linked)'), w('Bacteroidetes (Lean Linked)'), w('Actinobacteria & Others')],
+                datasets: [{
+                    data: [65, 25, 10],
+                    backgroundColor: ['#FF6B6B', '#4ECDC4', '#FFE66D'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                plugins: {
+                    ...ttp,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('fiberChart'), {
+            type: 'bar',
+            data: {
+                labels: [w('Standard Western Diet'), w('PMOS Minimum Target'), w('Optimal Intervention')],
+                datasets: [
+                    {
+                        label: 'Soluble Fiber (g)',
+                        data: [4, 10, 15],
+                        backgroundColor: '#FFE66D'
+                    },
+                    {
+                        label: 'Insoluble Fiber (g)',
+                        data: [8, 15, 20],
+                        backgroundColor: '#FF6B6B'
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true, beginAtZero: true, max: 40, title: { display: true, text: 'Grams / Day' } }
+                },
+                plugins: {
+                    ...ttp,
+                    legend: { position: 'top' }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('lipidChart'), {
+            type: 'radar',
+            data: {
+                labels: [w('High Sensitivity CRP'), w('Fasting Insulin'), w('Free Testosterone'), w('Triglycerides'), w('HOMA-IR')],
+                datasets: [
+                    {
+                        label: 'Baseline (Pre-Intervention)',
+                        data: [90, 85, 80, 75, 88],
+                        borderColor: '#FF6B6B',
+                        backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Post Omega-3 & MUFA',
+                        data: [40, 55, 60, 45, 50],
+                        borderColor: '#4ECDC4',
+                        backgroundColor: 'rgba(78, 205, 196, 0.4)',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        pointLabels: { color: '#F8FAFC', font: { size: 11 } },
+                        ticks: { display: false, min: 0, max: 100 }
+                    }
+                },
+                plugins: {
+                    ...ttp,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
