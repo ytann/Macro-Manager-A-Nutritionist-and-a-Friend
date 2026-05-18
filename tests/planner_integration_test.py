@@ -1,8 +1,10 @@
 import asyncio
 import json
 import os
+import pytest
 from app.services.planner import PlannerService
 
+@pytest.mark.asyncio
 async def test_planner_basic_flow():
     print("Running test_planner_basic_flow...")
     planner = PlannerService()
@@ -20,26 +22,14 @@ async def test_planner_basic_flow():
         
         if "🚨 Copilot Error" in response:
             print("FAIL: Copilot returned an error.")
-            return False
+            assert False, "Copilot returned an error."
         
         if not response or len(response) < 10:
             print("FAIL: Response too short or empty.")
-            return False
+            assert False, "Response too short or empty."
             
         print("SUCCESS: Basic flow completed.")
-        return True
+        assert True
     except Exception as e:
         print(f"FAIL: Exception occurred: {e}")
-        return False
-
-async def main():
-    success = await test_planner_basic_flow()
-    if success:
-        print("\nALL TESTS PASSED")
-        exit(0)
-    else:
-        print("\nSOME TESTS FAILED")
-        exit(1)
-
-if __name__ == "__main__":
-    asyncio.run(main())
+        assert False, f"Exception occurred: {e}"

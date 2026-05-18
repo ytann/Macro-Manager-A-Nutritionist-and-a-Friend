@@ -2,6 +2,7 @@ import asyncio
 import httpx
 import json
 import os
+import pytest
 from typing import List, Tuple
 
 API_URL = "http://localhost:8000"
@@ -64,6 +65,7 @@ TEST_CASES = [
     ("I'm feeling very fatigued, any dietary tips?", "clinical"),
 ]
 
+@pytest.mark.asyncio
 async def test_router_leak():
     print("====================================================")
     print("🛡️ ROUTER LEAK & PATH VALIDATION RIG")
@@ -80,7 +82,9 @@ async def test_router_leak():
                 # We use the /planner endpoint
                 response = await client.post(f"{API_URL}/planner", json={
                     "user_query": query,
-                    "remaining_macros": {"p": 0, "c": 0, "f": 0, "cal": 0}
+                    "remaining_macros": {"p": 0, "c": 0, "f": 0, "cal": 0},
+                    "goals": {"p": 0, "c": 0, "f": 0, "cal": 0},
+                    "consumed_macros": {"p": 0, "c": 0, "f": 0, "cal": 0}
                 })
                 
                 if response.status_code != 200:
@@ -126,8 +130,9 @@ async def test_router_leak():
     
     if leaks > 0:
         print("\n🚨 FAILURE: Clinical queries leaked into Fast-Path. The app is UNSAFE.")
-        return False
-    return True
-
+        assert False, f"{leaks} clinical queries leaked into Fast-Path!"
+        
+    assert passed > 0, "No tests passed!"
+    
 if __name__ == "__main__":
     asyncio.run(test_router_leak())

@@ -85,6 +85,32 @@ class DatabaseManager:
     def _init_foodbank(self):
         with sqlite3.connect(self.foodbank_path) as conn:
             cursor = conn.cursor()
+            
+            # Check if foods table exists before trying to migrate
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='foods'")
+            foods_exists = cursor.fetchone() is not None
+
+            if foods_exists:
+                # Migration: Add barcode to foods FTS5 table if missing
+                cursor.execute("PRAGMA table_info(foods)")
+                cols = [row[1] for row in cursor.fetchall()]
+                if 'barcode' not in cols:
+                    cursor.execute("""
+                        CREATE VIRTUAL TABLE foods_new USING fts5(
+                            name, aliases, barcode UNINDEXED, calories UNINDEXED, protein UNINDEXED, 
+                            carbs UNINDEXED, fat UNINDEXED, fiber UNINDEXED, 
+                            sugar UNINDEXED, saturated_fat UNINDEXED, unsaturated_fat UNINDEXED,
+                            is_complete_protein UNINDEXED,
+                            verified UNINDEXED, source UNINDEXED
+                        )
+                    """)
+                    cursor.execute("""
+                        INSERT INTO foods_new (name, aliases, calories, protein, carbs, fat, fiber, sugar, saturated_fat, unsaturated_fat, is_complete_protein, verified, source)
+                        SELECT name, aliases, calories, protein, carbs, fat, fiber, sugar, saturated_fat, unsaturated_fat, is_complete_protein, verified, source FROM foods
+                    """)
+                    cursor.execute("DROP TABLE foods")
+                    cursor.execute("ALTER TABLE foods_new RENAME TO foods")
+
             cursor.execute(queries.SCHEMA_FOODS_FTS)
             cursor.execute(queries.SCHEMA_RECIPES)
             cursor.execute(queries.SCHEMA_PENDING_VERIFICATION)

@@ -1,0 +1,2 @@
+./run_rig.sh: line 7: 11752 Killed                  python3 -m uvicorn app.api:app --port 8001 > uvicorn.log 2>&1
+./run_rig.sh: line 8: kill: (11752) - No such process

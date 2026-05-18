@@ -96,7 +96,16 @@ h1, h2, h3 { color: #2a1f10 !important; }
     border-radius: 4px !important;
     caret-color:   #7F77DD;
 }
+
+/* Target radio button labels and options */
+[data-testid="stRadio"] label,
+div[role="radiogroup"] label,
+div[role="radiogroup"] div {
+    color: #2a1f10 !important;
+}
+
 textarea::placeholder, input::placeholder {
+
     font-size: 13px !important;
     color: #9a8d7c !important;
     opacity: 1 !important;
@@ -495,6 +504,24 @@ def api_vision_log(b64, environment, hint, meal_type="General"):
     r = requests.post(
         f"{API_URL}/vision-log",
         json={"base64_image": b64, "environment": environment, "hint": hint, "meal_type": meal_type},
+        timeout=45,
+    )
+    r.raise_for_status()
+    return r.json()
+
+def api_barcode_log(b64, quantity, meal_type, product_name):
+    r = requests.post(
+        f"{API_URL}/barcode-log",
+        json={"base64_image": b64, "quantity": quantity, "meal_type": meal_type, "product_name": product_name},
+        timeout=45,
+    )
+    r.raise_for_status()
+    return r.json()
+
+def api_label_log(b64, quantity, meal_type, product_name):
+    r = requests.post(
+        f"{API_URL}/label-log",
+        json={"base64_image": b64, "quantity": quantity, "meal_type": meal_type, "product_name": product_name},
         timeout=45,
     )
     r.raise_for_status()
@@ -992,45 +1019,77 @@ def render_food_log():
 
     # ── Camera ────────────────────────────────────────────
     with tab_cam:
-        env_col, meal_col = st.columns([1.5, 1.5])
-        with env_col:
-            env = st.selectbox(
-                "setting",
-                ["home", "restaurant", "street food", "packaged"],
-                key="cam_env",
+        log_mode = st.radio("Mode", ["Food Image", "Barcode", "Product Label"], horizontal=True, label_visibility="collapsed")
+        
+        if log_mode == "Food Image":
+            env_col, meal_col = st.columns([1.5, 1.5])
+            with env_col:
+                env = st.selectbox(
+                    "setting",
+                    ["home", "restaurant", "street food", "packaged"],
+                    key="cam_env",
+                    label_visibility="collapsed",
+                )
+            with meal_col:
+                meal_type = st.selectbox(
+                    "meal type",
+                    ["breakfast", "lunch", "dinner", "snack"],
+                    key="mt_cam",
+                    label_visibility="collapsed",
+                )
+            
+            hint = st.text_input(
+                "hint (optional)",
+                placeholder="e.g. South Indian thali",
+                key="cam_hint",
                 label_visibility="collapsed",
             )
-        with meal_col:
+            
+            uploaded_file = st.file_uploader(
+                "Choose an image",
+                type=["jpg", "jpeg", "png"],
+                label_visibility="collapsed"
+            )
+            if uploaded_file is not None:
+                st.image(uploaded_file, use_container_width=True, caption="Selected image")
+                if st.button("analyse photo →", key="btn_vision_gallery"):
+                    b64 = base64.b64encode(uploaded_file.read()).decode()
+                    st.session_state.pending_vision_log = {
+                        "b64": b64,
+                        "env": env,
+                        "hint": hint or "",
+                        "meal_type": meal_type,
+                        "mode": "Food Image"
+                    }
+                    st.rerun()
+        else:
             meal_type = st.selectbox(
                 "meal type",
                 ["breakfast", "lunch", "dinner", "snack"],
-                key="mt_cam",
+                key="mt_cam_other",
                 label_visibility="collapsed",
             )
-        
-        hint = st.text_input(
-            "hint (optional)",
-            placeholder="e.g. South Indian thali",
-            key="cam_hint",
-            label_visibility="collapsed",
-        )
-        
-        uploaded_file = st.file_uploader(
-            "Choose an image",
-            type=["jpg", "jpeg", "png"],
-            label_visibility="collapsed"
-        )
-        if uploaded_file is not None:
-            st.image(uploaded_file, use_container_width=True, caption="Selected image")
-            if st.button("analyse photo →", key="btn_vision_gallery"):
-                b64 = base64.b64encode(uploaded_file.read()).decode()
-                st.session_state.pending_vision_log = {
-                    "b64": b64,
-                    "env": env,
-                    "hint": hint or "",
-                    "meal_type": meal_type
-                }
-                st.rerun()
+            product_name = st.text_input("Product Name (Optional)", placeholder="e.g. Tomato Soup", key=f"pn_{log_mode}")
+            quantity = st.number_input("Quantity Consumed (g or ml)", min_value=1, value=100, step=1, key=f"q_{log_mode}")
+            
+            uploaded_file = st.file_uploader(
+                f"Choose a {log_mode} image",
+                type=["jpg", "jpeg", "png"],
+                label_visibility="collapsed",
+                key=f"up_{log_mode}"
+            )
+            if uploaded_file is not None:
+                st.image(uploaded_file, use_container_width=True, caption=f"Selected {log_mode}")
+                if st.button("process image →", key=f"btn_{log_mode}"):
+                    b64 = base64.b64encode(uploaded_file.read()).decode()
+                    st.session_state.pending_vision_log = {
+                        "b64": b64,
+                        "meal_type": meal_type,
+                        "quantity": quantity,
+                        "product_name": product_name,
+                        "mode": log_mode
+                    }
+                    st.rerun()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1109,9 +1168,9 @@ def render_journal():
                                       st.session_state.editing_meal["index"] == i)
                         
                         # Rounding Logic
-                        p_val = int(math.floor(item['macros'].get('protein', 0)))
-                        c_val = int(math.ceil(item['macros'].get('carbs', 0)))
-                        f_val = int(math.ceil(item['macros'].get('fat', 0)))
+                        p_val = int(round(item['macros'].get('protein', 0)))
+                        c_val = int(round(item['macros'].get('carbs', 0)))
+                        f_val = int(round(item['macros'].get('fat', 0)))
                         g_val = int(round(item['grams']))
                         
                         # Row for each item
@@ -1380,40 +1439,54 @@ def render_pending_vision_log():
     if not log_data:
         return
     
-    b64 = log_data["b64"]
-    env = log_data["env"]
-    hint = log_data["hint"]
+    b64 = log_data.get("b64")
     meal_type = log_data.get("meal_type", "General")
+    mode = log_data.get("mode", "Food Image")
     
     placeholder = st.empty()
     with placeholder.container():
+        title = "Analyzing Photo" if mode == "Food Image" else f"Processing {mode}"
+        message = "Our clinical vision model is analyzing your photo and estimating PMOS-calibrated macronutrients…" if mode == "Food Image" else f"Extracting nutritional info from {mode.lower()}…"
+        icon = "📸" if mode == "Food Image" else ("🏷️" if mode == "Product Label" else "🔣")
+
         st.markdown(f"""
         <div class="loader-container">
             <div class="loader-card">
                 <div class="notebook-spinner">
-                    <div class="loader-icon">📸</div>
+                    <div class="loader-icon">{icon}</div>
                 </div>
-                <div class="loader-title">Analyzing Photo</div>
-                <div class="loader-message">Our clinical vision model is analyzing your photo and estimating PMOS-calibrated macronutrients…</div>
+                <div class="loader-title">{title}</div>
+                <div class="loader-message">{message}</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
         
     try:
-        api_vision_log(b64, env, hint, meal_type)
+        if mode == "Barcode":
+            api_barcode_log(b64, log_data.get("quantity", 100), meal_type, log_data.get("product_name", ""))
+        elif mode == "Product Label":
+            api_label_log(b64, log_data.get("quantity", 100), meal_type, log_data.get("product_name", ""))
+        else:
+            api_vision_log(b64, log_data.get("env", "home"), log_data.get("hint", ""), meal_type)
+            
         fetch_summary()
         st.session_state.pending_vision_log = None
         placeholder.empty()
-        st.toast("✓ Photo logged and macros updated!")
-        st.rerun()
+        st.toast(f"✓ {mode} logged and macros updated!")
+    except requests.exceptions.HTTPError as he:
+        st.session_state.pending_vision_log = None
+        placeholder.empty()
+        try:
+            err = he.response.json().get("detail", str(he))
+        except:
+            err = str(he)
+        st.error(f"{mode} failed: {err}")
     except Exception as exc:
         st.session_state.pending_vision_log = None
         placeholder.empty()
-        st.error(f"Vision log failed: {exc}")
-        time.sleep(3.0)
-        st.rerun()
-
-
+        st.error(f"{mode} failed: {exc}")
+        
+    st.rerun()
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PAGE: DASHBOARD

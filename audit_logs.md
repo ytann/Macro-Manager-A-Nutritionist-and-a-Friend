@@ -22,7 +22,7 @@
 | [Duplicate seed data in two locations](#duplicate-seed-data-in-two-locations) | Identical food lists in `_init_foodbank` and `seed_db` | Low | [FIXED] |
 | [`FoodLogSchema.md` wiki page out of sync](#foodlogschema-wiki-page-out-of-sync) | Missing `verified` field and `GoalRequest` in wiki | Low | [FIXED] |
 | [No client cleanup on app shutdown](#no-asynclient-cleanup-on-app-shutdown) | `httpx.AsyncClient` not closed in lifespan handler | Low | [FIXED] |
-| [Double DuckDuckGo requests](#double-duckduckgo-requests) | Redundant network calls for identical HTML | Medium | [FIXED] |
+| [pyzbar dependency missing](#pyzbar-dependency-missing) | `pyzbar` not found in runtime environment; caused barcode decoding to fail | Medium | [FIXED] |
 | [No `source` column in foods table](#no-source-column-in-foods-table) | Cannot audit nutrition data origin | Medium | [FIXED] |
 | [Hardcoded prompt in `find_source_of_truth`](#hardcoded-prompt-in-find_source_of_truth) | Prompt not externalized in `prompts.yaml` | Medium | [FIXED] |
 | [Wiki documentation out of sync](#wiki-documentation-out-of-sync-with-code) | Docs reference dead code/old architecture | Medium | [FIXED] |

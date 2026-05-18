@@ -14,7 +14,7 @@ The system employs a decoupled **Client-Server Architecture**:
 *   **Persistence Layer (SQLite)**: 
     *   `foodbank.db`: Static and learned food nutrition data.
     *   `macros.db`: User meal logs and goal settings.
-*   **Vision Pipeline**: A multimodal module extracting food items from images with environment-aware portion size estimation (`Home` vs `Wild`).
+*   **Vision Pipeline**: A multimodal module extracting food items from images, barcodes, and nutritional labels with environment-aware portion size estimation (`Home` vs `Wild`).
 *   **Sovereign Memory**: A personalized dietary glossary (`personal_glossary.md`) that stores user-specific facts (e.g., utensil sizes, frequent meal variations) to enhance extraction accuracy.
 *   **Offline Sync Queue**: A background mechanism that captures unverified data while offline and synchronizes with authoritative sources via a heartbeat lifecycle.
 *   **Onboarding Engine**: LLM-driven attribute extraction from free-text bios, followed by deterministic PMOS-calibrated macro calculation.
@@ -43,7 +43,8 @@ To ensure a snappy UX, the system uses a **Job-Status model**:
 
 #### C. `ExtractionService`
 *   **Unified Resolver**: A centralized engine that handles recipe expansion and nutrition resolution identically for both text and vision paths.
-*   **Vision Analysis**: Employs a Two-Step reasoning process (**Analysis $\rightarrow$ Extraction**) using environment rules (`Home` vs `Wild`) to estimate portion sizes.
+* **Vision Analysis**: Employs a Two-Step reasoning process (**Analysis $\rightarrow$ Extraction**) using environment rules (`Home` vs `Wild`) to estimate portion sizes from photos, barcodes, and labels.
+
 
 #### D. `PlannerService` (Clinical Copilot)
 Provides empathetic and safe dietary guidance via a three-stage pipeline:
@@ -66,7 +67,7 @@ The system leverages **Gemma 4 (`gemma4:e2b`)** as its cognitive core:
 | Task | Implementation | Key Strategy |
 | :--- | :--- | :--- |
 | **Text Extraction** | `ExtractionService` | High-recall, single-pass extraction. |
-| **Vision Analysis** | `ExtractionService` | Multimodal (Image + Text) analysis + Env rules. |
+| **Vision Analysis** | `ExtractionService` | Multimodal (Image + Text/OCR) analysis + Env rules. |
 | **Nutritional Search** | `FoodbankService` | Validates search results against "Sources of Truth". |
 | **User Onboarding** | `OnboardingService` | Attribute extraction from free-text bios. |
 
@@ -80,6 +81,7 @@ The system leverages **Gemma 4 (`gemma4:e2b`)** as its cognitive core:
 | **Async Logging** | Instant extraction $\rightarrow$ Background resolution | Job-Status Model + BackgroundTasks |
 | **Fuzzy Matching** | Maps typos $\rightarrow$ canonical food entries | `difflib` Canonicalization Layer |
 | **Vision Logging** | Image $\rightarrow$ Item + Weight extraction | Multimodal Gemma 4 + Env Rules |
+| **Barcode & Label Scanning** | Barcode/Label $\rightarrow$ Item + Weight extraction | Multimodal Gemma 4 + OCR fallback |
 | **Clinical Copilot** | AI-driven meal planning + Medical Firewall | PlannerService $\rightarrow$ Router $\rightarrow$ Copilot |
 | **PMOS Calibration** | Bio-text $\rightarrow$ Calibrated macro targets | Onboarding Engine + metabolic penalty |
 | **Inline Editing** | Ratio-based quantity scaling in the journal | `PATCH /meals/{id}` + proportionally scaled macros |
@@ -119,3 +121,4 @@ The system transitioned from a prototype to a "clinical notebook" experience:
 - **High-Fidelity Journal**: Implemented a sticky-header tabular view for the daily log.
 - **Inline Quantity Scaling**: Changing the weight of a food item automatically scales its protein, carbs, and fat proportionally on the server.
 - **Schema Hardening**: Strict Pydantic validation in the update pipeline to ensure data integrity during manual edits.
+- **Barcode & Label Scanning**: Integrated multimodal recognition for rapid logging of pre-packaged foods.

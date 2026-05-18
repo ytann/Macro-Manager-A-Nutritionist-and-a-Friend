@@ -12,7 +12,8 @@ app/
   frontend.py         Streamlit: daily progress, static calendar week buffer, food journal, meal logging, goal settings, Clinical Copilot UI. Uses shared httpx.AsyncClient for pooling.
   core/config.py      Config: LITELLM_API_BASE, LLM_MODEL, DB paths, prompts path
   core/llm.py            LLM Utility: Global concurrency control (Semaphore) for Ollama stability
-  schemas/food_schemas.py  Pydantic: Macros, SubMacros, FoodItem, FoodLog, GoalRequest
+   schemas/food_schemas.py  Pydantic: Macros, SubMacros, FoodItem, FoodLog, LabelExtraction, GoalRequest
+
   services/
        database.py       DatabaseManager: 2 SQLite DBs (foodbank.db + macros.db).
                         FTS5 foods table, recipes, pending_verification, sync_status, meals.
@@ -71,12 +72,14 @@ User Query -> PlannerService.plan()
 
 
 Vision Pipeline (POST /vision-log):
-   User Image (base64 + environment + optional hint) -> ExtractionService.extract_from_image()
+   User Image (base64 + environment + optional hint) or Barcode/Label $\rightarrow$ ExtractionService.extract_from_image()
       1. Multimodal payload: text (vision_estimate prompt + hint) + image (base64) $\rightarrow$ gemma4:e2b (Two-step Analysis $\rightarrow$ Extraction)
-     2. Environment rules: Home (~250-500g plates) vs. Wild (~300-600g plates)
-     3. Returns [{name, grams}] items
-     4. Pass to Unified Resolver -> build FoodLog
-     5. Persist to macros.db (meal_type="Vision")
+         - For Labels: Prioritizes visual information, using OCR text as a secondary hint for accuracy.
+      2. Environment rules: Home (~250-500g plates) vs. Wild (~300-600g plates)
+      3. Returns [{name, grams}] items
+      4. Pass to Unified Resolver -> build FoodLog
+      5. Persist to macros.db (meal_type="Vision")
+
 
 
 Heartbeat (asyncio task, lifespan-managed):

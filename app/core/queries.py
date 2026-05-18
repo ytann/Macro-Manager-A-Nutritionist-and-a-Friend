@@ -2,9 +2,11 @@
 # Foodbank
 FOODS_SEARCH_BY_NAME = "SELECT * FROM foods WHERE name = ? COLLATE NOCASE OR aliases LIKE ? COLLATE NOCASE LIMIT 1"
 FOODS_SEARCH_MATCH = "SELECT * FROM foods WHERE foods MATCH ? ORDER BY rank LIMIT 1"
+FOODS_SEARCH_BY_BARCODE = "SELECT * FROM foods WHERE barcode = ? LIMIT 1"
 RECIPES_GET_BY_NAME = "SELECT recipe_json FROM recipes WHERE dish_name = ?"
 RECIPES_UPSERT = "INSERT OR REPLACE INTO recipes (dish_name, recipe_json) VALUES (?, ?)"
 FOODS_UPSERT = "INSERT OR REPLACE INTO foods (rowid, name, aliases, calories, protein, carbs, fat, fiber, sugar, saturated_fat, unsaturated_fat, is_complete_protein, verified, source) VALUES ((SELECT rowid FROM foods WHERE name = ?), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+FOODS_UPSERT_BARCODE = "INSERT OR REPLACE INTO foods (rowid, name, aliases, barcode, calories, protein, carbs, fat, fiber, sugar, saturated_fat, unsaturated_fat, is_complete_protein, verified, source) VALUES ((SELECT rowid FROM foods WHERE barcode = ? LIMIT 1), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 PENDING_VERIFICATION_UPSERT = "INSERT OR REPLACE INTO pending_verification (name, retry_count) VALUES (?, COALESCE((SELECT retry_count FROM pending_verification WHERE name = ?), 0))"
 PENDING_VERIFICATION_GET_ALL = "SELECT name, retry_count FROM pending_verification"
 PENDING_VERIFICATION_DELETE = "DELETE FROM pending_verification WHERE name = ?"
@@ -44,7 +46,7 @@ GOALS_GET = "SELECT protein, carbs, fat, calories FROM goals WHERE id = 1"
 # Schema Initialization
 SCHEMA_FOODS_FTS = """
     CREATE VIRTUAL TABLE IF NOT EXISTS foods USING fts5(
-        name, aliases, calories UNINDEXED, protein UNINDEXED, 
+        name, aliases, barcode UNINDEXED, calories UNINDEXED, protein UNINDEXED, 
         carbs UNINDEXED, fat UNINDEXED, fiber UNINDEXED, 
         sugar UNINDEXED, saturated_fat UNINDEXED, unsaturated_fat UNINDEXED,
         is_complete_protein UNINDEXED,

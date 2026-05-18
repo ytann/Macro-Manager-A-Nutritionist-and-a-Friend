@@ -8,6 +8,7 @@ from contextlib import asynccontextmanager
 from app.services.extraction import ExtractionService
 from app.services.database import DatabaseManager
 from app.services.foodbank import FoodbankService
+from app.services.barcode_service import BarcodeService
 from app.services.onboarding import OnboardingService, OnboardingValidationError
 from app.services.memory import MemoryService
 from app.services.planner import PlannerService
@@ -57,6 +58,7 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 db_manager = DatabaseManager()
 foodbank_service = FoodbankService(db_manager)
 extraction_service = ExtractionService(foodbank_service)
+barcode_service = BarcodeService(db_manager, foodbank_service)
 onboarding_service = OnboardingService()
 memory_service = MemoryService()
 planner_service = PlannerService(db_manager)
@@ -72,6 +74,12 @@ class VisionLogRequest(BaseModel):
     environment: str = "Home"
     hint: str = ""
     meal_type: str = "General"
+
+class BarcodeLogRequest(BaseModel):
+    base64_image: str
+    quantity: float
+    meal_type: str = "General"
+    product_name: str = ""
 
 class OnboardRequest(BaseModel):
     bio_text: str = Field(..., max_length=5000)
@@ -421,6 +429,89 @@ async def log_vision_meal(request: VisionLogRequest):
         import traceback
         traceback.print_exc()
         raise HTTPException(status_code=400, detail=str(e))
+
+@app.post("/barcode-log")
+async def log_barcode_meal(request: BarcodeLogRequest):
+    try:
+        data = await barcode_service.process_barcode(request.base64_image)
+        if not data:
+            raise HTTPException(status_code=400, detail="Barcode not found or could not be decoded. Try scanning the label.")
+
+        import uuid
+        from app.schemas.food_schemas import Macros, SubMacros
+        name = request.product_name.strip() or data.get('name', 'Unknown Product')
+        cal_100 = data.get('calories', 0)
+        p_100 = data.get('protein', 0)
+        c_100 = data.get('carbs', 0)
+        f_100 = data.get('fat', 0)
+        verified = data.get('verified', 1) == 1
+
+        ratio = request.quantity / 100.0
+        actual_cal = cal_100 * ratio
+        actual_p = p_100 * ratio
+        actual_c = c_100 * ratio
+        actual_f = f_100 * ratio
+
+        item = FoodItem(
+            name=name,
+            grams=request.quantity,
+            cals=actual_cal,
+            macros=Macros(protein=actual_p, carbs=actual_c, fat=actual_f),
+            sub_macros=SubMacros(),
+            verified=verified
+        )
+
+        meal_id = f"barcode_{uuid.uuid4().hex[:8]}"
+        totals = {'p': actual_p, 'c': actual_c, 'f': actual_f, 'cal': actual_cal}
+        await _save_meal_to_db(meal_id, [item], totals, request.meal_type)
+
+        return {"status": "success", "meal_id": meal_id, "data": item.model_dump()}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Barcode API Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/label-log")
+async def log_label_meal(request: BarcodeLogRequest):
+    try:
+        data = await barcode_service.process_label(request.base64_image)
+        if not data:
+            raise HTTPException(status_code=400, detail="Could not extract data from the label.")
+
+        import uuid
+        from app.schemas.food_schemas import Macros, SubMacros
+        name = request.product_name.strip() or data.get('name', 'Label Scanned Product')
+        cal_100 = data.get('calories', 0)
+        p_100 = data.get('protein', 0)
+        c_100 = data.get('carbs', 0)
+        f_100 = data.get('fat', 0)
+
+        ratio = request.quantity / 100.0
+        actual_cal = cal_100 * ratio
+        actual_p = p_100 * ratio
+        actual_c = c_100 * ratio
+        actual_f = f_100 * ratio
+
+        item = FoodItem(
+            name=name,
+            grams=request.quantity,
+            cals=actual_cal,
+            macros=Macros(protein=actual_p, carbs=actual_c, fat=actual_f),
+            sub_macros=SubMacros(),
+            verified=True
+        )
+
+        meal_id = f"label_{uuid.uuid4().hex[:8]}"
+        totals = {'p': actual_p, 'c': actual_c, 'f': actual_f, 'cal': actual_cal}
+        await _save_meal_to_db(meal_id, [item], totals, request.meal_type)
+
+        return {"status": "success", "meal_id": meal_id, "data": item.model_dump()}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Label API Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/memory")
 async def update_memory(request: MemoryRequest):

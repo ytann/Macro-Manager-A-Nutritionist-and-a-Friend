@@ -9,8 +9,8 @@ AI-powered nutrition tracking specialized for **PMOS (prev. PCOS)/PCOD** managem
 - **📝 Intelligent Food Journal**: 
   - **Inline Editing**: Update quantities directly in the journal; macros scale proportionally in real-time.
   - **Timezone Alignment**: Server-side `localtime` synchronization to prevent "ghost entries" and date mismatches.
-- **📷 Vision Extraction**: Multimodal food analysis with environment-aware portion estimation (`Home` vs `Wild`).
-- **🩺 Clinical Copilot**: AI-driven dietary guidance primed with PMOS metabolic context, protected by a **Medical Firewall** to ensure safety.
+- **📷 Multimodal Vision Extraction**: High-fidelity food analysis via photos, barcode scanning, or product label extraction, with environment-aware portion estimation (`Home` vs `Wild`).
+- **🏷️ Barcode & Label Scanning**: Direct recognition of UPC/EAN barcodes and nutritional labels for rapid, accurate logging.
 - **🔄 Sovereign Memory**: A personalized dietary glossary that remembers your specific utensil sizes and food preferences.
 - **📡 Offline-Ready**: Async sync queue with heartbeat lifecycle for seamless logging in low-connectivity areas.
 

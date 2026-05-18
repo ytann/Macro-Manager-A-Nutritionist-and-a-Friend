@@ -28,15 +28,24 @@ class FoodLog(BaseModel):
     total_sub_macros: Optional[SubMacros] = None
     total_calories: float = Field(..., ge=0, le=20000)
     confidence_score: float = Field(..., ge=0, le=1)
- 
+    
     @field_validator('confidence_score')
     @classmethod
     def validate_score(cls, v):
         if not 0 <= v <= 1:
             raise ValueError('Score must be between 0 and 1')
         return v
- 
+
+class LabelExtraction(BaseModel):
+    name: str
+    serving_size: float
+    calories: float
+    protein: float
+    carbs: float
+    fat: float
+
 class GoalRequest(BaseModel):
+
     protein: float = Field(..., ge=0)
     carbs: float = Field(..., ge=0)
     fat: float = Field(..., ge=0)

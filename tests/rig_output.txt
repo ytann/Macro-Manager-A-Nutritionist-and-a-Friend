@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.13, pytest-9.0.3, pluggy-1.6.0 -- /home/ytann/miniconda3/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /home/ytann/Desktop/AI-Projects/Macro-Manager/Macro-Manager: The PMOS Nutritionist and Friend
+plugins: anyio-4.12.1, asyncio-1.3.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/safety_rig/router_leak_test.py::test_router_leak PASSED            [100%]
+
+========================= 1 passed in 94.36s (0:01:34) =========================

@@ -41,6 +41,18 @@ class FoodLog(BaseModel):
             raise ValueError('Score must be between 0 and 1')
         return v
 
+class LabelExtraction(BaseModel):
+    """
+    Strict schema for nutritional data extracted from product labels.
+    Ensures reliable parsing of multimodal vision responses.
+    """
+    name: str
+    serving_size: float
+    calories: float
+    protein: float
+    carbs: float
+    fat: float
+
 class GoalRequest(BaseModel):
     protein: float = Field(..., ge=0)
     carbs: float = Field(..., ge=0)
